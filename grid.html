@@ -24,7 +24,7 @@
     display:grid; place-items:center; padding:24px; overflow-x:hidden;
   }
 
-  /* soft cosmic background (very subtle, behind everything) */
+  /* subtle space BG */
   .space-bg{
     position:fixed; inset:0; pointer-events:none; z-index:-1;
     background:
@@ -40,14 +40,10 @@
       radial-gradient(1.8px 1.8px at 80% 55%, var(--star), transparent 60%),
       radial-gradient(1px 1px at 50% 12%, var(--star), transparent 60%),
       radial-gradient(1px 1px at 70% 88%, var(--star), transparent 60%);
-    opacity:.28; filter:blur(.2px);
-    animation: drift 36s linear infinite;
+    opacity:.28; filter:blur(.2px); animation: drift 36s linear infinite;
   }
-  .space-bg::after{opacity:.18; animation-duration: 52s; transform:scale(1.25)}
-  @keyframes drift{
-    0%{transform:translate3d(0,0,0)}
-    100%{transform:translate3d(-3%, -2%, 0)}
-  }
+  .space-bg::after{opacity:.18; animation-duration:52s; transform:scale(1.25)}
+  @keyframes drift{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-3%,-2%,0)}}
 
   .container{width:min(96vw, 1260px); display:grid; grid-template-columns: 1fr 460px; gap:24px; align-items:start;}
   @media (max-width:1000px){ .container{grid-template-columns:1fr} }
@@ -83,7 +79,8 @@
   .coord{font-size:18px; color:#93a7ef; opacity:.92}
   .icon{display:grid; place-items:center; width:100%; height:100%}
   svg{width:84%; height:auto; filter: drop-shadow(0 8px 22px rgba(126,232,250,.22));}
-  @media (min-width:1400px){ th,td{width:132px;height:132px} svg{width:80%} }
+  .dual svg{width:92%}
+  @media (min-width:1400px){ th,td{width:132px;height:132px} svg{width:80%} .dual svg{width:88%} }
   @media (max-width:560px){ th,td{width:86px;height:86px} .coord{font-size:16px} }
 
   .rules{
@@ -106,7 +103,7 @@
   .beam{animation: beam .45s ease-out forwards}
   @keyframes beam{0%{opacity:0; transform:translateX(-30px)}15%{opacity:1}100%{opacity:1; transform:translateX(120px)}}
   .cross-burst{animation: cross-burst .34s ease-out forwards; transform-origin:center}
-  @keyframes cross-burst{0%{opacity:0; transform:scale(.6) rotate(-16deg)}100%{opacity:1; transform:scale(1) rotate(0)}}
+  @keyframes cross-burst{0%{opacity:0; transform:scale(.6) rotate(-20deg)}100%{opacity:1; transform:scale(1) rotate(0)}}
   .bomb-glow{animation:bglow 1.1s ease-out forwards}
   @keyframes bglow{0%{opacity:.25; transform:scale(.7)}80%{opacity:1; transform:scale(1.08)}100%{opacity:1; transform:scale(1)}}
   .pulse{animation:pulse .9s ease-out 1 forwards, soft-pulse 1.2s ease-in-out 2.2s infinite alternate; transform-origin:center}
@@ -172,8 +169,8 @@
   </div>
 
 <script>
-  // exact totals (25 cells) — increased Dual Blasters frequency
-  const COUNTS = { pistol: 7, pistols: 10, bomb: 5, heart: 2, fire: 1 }; // 'fire' => starbase explosion
+  // ORIGINAL totals restored (25 cells): 11/6/5/2/1
+  const COUNTS = { pistol: 11, pistols: 6, bomb: 5, heart: 2, fire: 1 }; // 'fire' => starbase explosion
 
   const letters = ["A","B","C","D","E"];
   const size = 5;
@@ -228,6 +225,7 @@
     cells.forEach(cell=>{
       cell.dataset.revealed="0";
       cell.innerHTML = `<span class="coord">${cell.dataset.coord}</span>`;
+      cell.classList.remove('dual');
     });
     clearRuleHighlights();
   }
@@ -246,11 +244,14 @@
       setTimeout(()=>{ this.classList.remove('flip-hide'); }, 260);
       this.dataset.revealed="0";
       this.innerHTML = `<span class="coord">${this.dataset.coord}</span>`;
+      this.classList.remove('dual');
       clearRuleHighlights();
     }else{
       this.dataset.revealed="1";
       const t = this.dataset.type;
-      this.innerHTML = `<div class="icon">${ICONS[t]()}</div>`;
+      const isDual = t === 'pistols';
+      this.innerHTML = `<div class="icon${isDual ? ' dual':''}">${ICONS[t]()}</div>`;
+      if(isDual) this.classList.add('dual');
       highlightRule(t);
     }
   }
@@ -274,19 +275,44 @@
     </svg>`;
   }
 
+  /* NEW: handcrafted Dual Blasters (two different rayguns, crossed X, both firing) */
   function svgDualBlasters(){
-    const left = svgBlaster()
-      .replace('#b7f0ff','#b7f0ff').replace('#4b7dff','#4b7dff'); // blue
-    const right = svgBlaster()
-      .replace('#b7f0ff','#ffd2b7').replace('#4b7dff','#ff7d4b')  // orange theme
-      .replace('#7be2ff','#ffb47b').replace('#2f5ad0','#d0572f')
-      .replace('#e8f6ff','#fff0e6').replace('#bde9ff','#ffd9bf')
-      .replace('#d9ecff','#ffe2cf').replace('#aee1ff','#ffd0a6')
-      .replace('#b9f3ff','#ffe3c0').replace('#67e1ff','#ffb46a');
     return `
     <svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg" aria-label="Dual Blasters">
-      <g class="cross-burst" transform="translate(70,92) rotate(-34) scale(.92)">${left.replace('<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-label="Blaster">','').replace('</svg>','')}</g>
-      <g class="cross-burst" transform="translate(310,188) rotate(146) scale(.92)">${right.replace('<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-label="Blaster">','').replace('</svg>','')}</g>
+      <defs>
+        <!-- cyan gun -->
+        <linearGradient id="c1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b7f0ff"/><stop offset="1" stop-color="#4b7dff"/></linearGradient>
+        <linearGradient id="c2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7be2ff"/><stop offset="1" stop-color="#2f5ad0"/></linearGradient>
+        <!-- magenta gun -->
+        <linearGradient id="m1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc0ff"/><stop offset="1" stop-color="#ff5fb1"/></linearGradient>
+        <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb4e2"/><stop offset="1" stop-color="#d0468f"/></linearGradient>
+      </defs>
+
+      <!-- LEFT cyan raygun -->
+      <g class="cross-burst" transform="translate(86,112) rotate(-34)">
+        <ellipse cx="0" cy="-6" rx="20" ry="10" fill="#e8f6ff"/>
+        <ellipse cx="0" cy="-6" rx="12" ry="6" fill="#bde9ff"/>
+        <rect x="10" y="-16" rx="10" width="120" height="24" fill="url(#c1)"/>
+        <polygon points="10,-16 -2,-34 24,-16" fill="#6fb9ff"/>
+        <polygon points="10,8 -2,26 24,8" fill="#6fb9ff"/>
+        <rect x="130" y="-10" width="28" height="12" rx="4" fill="#d9ecff"/>
+        <rect x="58" y="2" rx="6" width="32" height="52" fill="url(#c2)"/>
+        <g class="flash"><polygon points="158,-4 182,2 158,8" fill="#fff7cd"/><polygon points="158,-2 174,2 158,6" fill="#ffd971"/></g>
+        <g class="beam"><rect x="154" y="2" width="24" height="4" rx="2" fill="#b9f3ff"/><rect x="178" y="1" width="10" height="6" rx="3" fill="#67e1ff"/></g>
+      </g>
+
+      <!-- RIGHT magenta raygun (mirrored) -->
+      <g class="cross-burst" transform="translate(294,168) rotate(146)">
+        <ellipse cx="0" cy="-6" rx="20" ry="10" fill="#ffe8f8"/>
+        <ellipse cx="0" cy="-6" rx="12" ry="6" fill="#ffd6f1"/>
+        <rect x="10" y="-16" rx="10" width="120" height="24" fill="url(#m1)"/>
+        <polygon points="10,-16 -2,-34 24,-16" fill="#ff9edd"/>
+        <polygon points="10,8 -2,26 24,8" fill="#ff9edd"/>
+        <rect x="130" y="-10" width="28" height="12" rx="4" fill="#ffe2f3"/>
+        <rect x="58" y="2" rx="6" width="32" height="52" fill="url(#m2)"/>
+        <g class="flash"><polygon points="158,-4 182,2 158,8" fill="#fff1f8"/><polygon points="158,-2 174,2 158,6" fill="#ffc6e8"/></g>
+        <g class="beam"><rect x="154" y="2" width="24" height="4" rx="2" fill="#ffd3f3"/><rect x="178" y="1" width="10" height="6" rx="3" fill="#ff9edf"/></g>
+      </g>
     </svg>`;
   }
 
@@ -300,11 +326,8 @@
       </defs>
       <g class="bomb-glow">
         <circle cx="160" cy="172" r="100" fill="url(#metal)" stroke="#122033" stroke-width="2"/>
-        <g transform="translate(80,160)">
-          <rect x="0" y="0" width="160" height="18" rx="9" fill="url(#slot)"/>
-          <g transform="translate(4,0)">
-            ${Array.from({length:10}).map((_,i)=>`<polygon points="${i*16},0 ${i*16+10},0 ${i*16+6},18 ${i*16-4},18" fill="url(#stripeY)"/>`).join('')}
-          </g>
+        <g transform="translate(80,160)"><rect x="0" y="0" width="160" height="18" rx="9" fill="url(#slot)"/>
+          <g transform="translate(4,0)">${Array.from({length:10}).map((_,i)=>`<polygon points="${i*16},0 ${i*16+10},0 ${i*16+6},18 ${i*16-4},18" fill="url(#stripeY)"/>`).join('')}</g>
         </g>
         <rect x="110" y="120" width="12" height="10" rx="2" fill="#21324f"/>
         <rect x="198" y="120" width="12" height="10" rx="2" fill="#21324f"/>
