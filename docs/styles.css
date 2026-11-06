@@ -310,3 +310,10 @@ footer span:last-child { max-width: 440px; text-align: right; }
 }
 
 @media(max-width:480px){.catalog-facets select{flex:1 1 40%;min-width:0}.catalog-visible-count{flex:1 1 100%;text-align:right}}
+
+/* Release year is provenance, not a loud promotional badge. */
+.release-tag { margin: -2px 0 10px; color: var(--muted, #a6a6a6); font-size: 12px; letter-spacing: .005em; }
+.year-source { display:block; margin-top: 5px; font-size:11px; font-weight:500; color: var(--muted, #b1ad9e); }
+.catalog-facets { flex-wrap:wrap; }
+.catalog-facets select { max-width: 100%; min-width:0; }
+@media(max-width: 600px) { .catalog-facets { display:flex; gap:8px; } .catalog-facets select { flex:1 1 calc(50% - 8px); } .catalog-facets .catalog-visible-count { flex-basis:100%; } }

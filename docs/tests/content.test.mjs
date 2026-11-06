@@ -5,7 +5,7 @@ import {defaults, compareAdvice, purchaseChecklist, priceEvidence, tradeoffs, fi
 const data=JSON.parse(readFileSync(new URL('../catalog.json',import.meta.url),'utf8'));
 const byId=id=>data.products.find(p=>p.id===id);
 test('Every item has distinct editorial guidance and a test to perform',()=>{
- assert.equal(data.products.length,40);
+ assert.equal(data.products.length,80);
  for(const p of data.products){
   for(const key of ['best_for','not_for','try_in_store','question']) assert.ok(typeof p.editorial?.[key]==='string'&&p.editorial[key].length>35,`${p.id}: ${key}`);
   assert.notEqual(p.editorial.best_for,p.editorial.not_for);

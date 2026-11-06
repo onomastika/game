@@ -1,10 +1,126 @@
 {
-  "schema_version": "0.4.0",
+  "schema_version": "0.5.0",
   "currency": "VND",
   "market": "Vietnam",
   "snapshot_at": "2026-11-06",
   "disclaimer": "Manufacturer-backed research snapshot as of 2026-11-06, not real-time Vietnamese inventory. Unknown fields are null; zero unverified local prices invented.",
   "products": [
+    {
+      "id": "akai-mpk261",
+      "brand": "Akai",
+      "model": "MPK261",
+      "type": "midi_controller",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель MPK261: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.musicradar.com/news/tech/akais-new-mpk-midi-controller-keyboards-now-available-591995",
+          "source_type": "report",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Универсальный контроллер с пэдами, фейдерами и aftertouch для б/у рынка.",
+        "not_for": "Старое поколение, нет собственного звука; проверь клавиши и фейдеры особенно тщательно.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Akai MPK261 в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2014,
+      "release_year_evidence": {
+        "url": "https://www.musicradar.com/news/tech/akais-new-mpk-midi-controller-keyboards-now-available-591995",
+        "basis": "dated_product_launch_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "alesis-v49-mkii",
+      "brand": "Alesis",
+      "model": "V49 MKII",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 49,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель V49 MKII: 49 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.studio.se/nyheter/pressmeddelande/alesis-announces-the-new-v-series-v25-mkii-v49-mkii-and-v61-mkii-r534/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Недорогой инструмент для записи MIDI в Reaper с пэдами.",
+        "not_for": "49 клавиш не хватало раньше; встроенного звука нет.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Alesis V49 MKII в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2021,
+      "release_year_evidence": {
+        "url": "https://www.studio.se/nyheter/pressmeddelande/alesis-announces-the-new-v-series-v25-mkii-v49-mkii-and-v61-mkii-r534/",
+        "basis": "manufacturer_press_release_reprint",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
     {
       "id": "alesis-v61-mkii",
       "brand": "Alesis",
@@ -56,7 +172,72 @@
         "try_in_store": "Подключи VST-пианино, сыграй гамму в тихой динамике и несколько аккордов, затем проверь пэды.",
         "question": "Нужны ли тебе пэды для ударных или хватило бы ещё более простого контроллера?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2021,
+      "release_year_evidence": {
+        "url": "https://www.studio.se/nyheter/pressmeddelande/alesis-announces-the-new-v-series-v25-mkii-v49-mkii-and-v61-mkii-r534/",
+        "basis": "manufacturer_press_release_reprint",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "arturia-astrolab-61",
+      "brand": "Arturia",
+      "model": "AstroLab 61",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель AstroLab 61: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.arturia.com/company/press/press-releases",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Аппаратные синтезаторные звуки и тесная связь с экосистемой Arturia.",
+        "not_for": "Собственный звук не означает встроенные динамики — нужны наушники/колонки.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Arturia AstroLab 61, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.arturia.com/company/press/press-releases",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "arturia-keylab61-mk3",
@@ -109,7 +290,14 @@
         "try_in_store": "Проверь клавиши в диапазоне тихо–громко, работу aftertouch и возможность настроить управление Reaper.",
         "question": "Станут ли расширенные органы управления полезны тебе уже сейчас или хватит KeyLab Essential?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.arturia.com/de/company/press/press-releases/arturia-unveils-keylab-mk3",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "arturia-keylabessential49-mk3",
@@ -162,7 +350,14 @@
         "try_in_store": "Сыграй быстрые партии в пределах четырёх октав, попробуй выбрать пресет через контроллер.",
         "question": "Готов ли ты сократить диапазон ради компактности, не теряя динамику и удобные органы управления?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://www.arturia.com/de/company/press/press-releases/keylab-essential-mk3-is-here",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "arturia-keylabessential61-mk3",
@@ -215,7 +410,72 @@
         "try_in_store": "Сравни равномерность тихих нот по всей клавиатуре и проверь, удобно ли доставать до регуляторов.",
         "question": "Нужны ли тебе дополнительные контроллеры уже сейчас — или пока достаточно только клавиш?",
         "data_warning": "Официальная карточка этой модификации указывает ширину 89 см, но на другой странице встречается противоречивый размер. Перепроверь габариты перед заказом."
-      }
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://www.arturia.com/de/company/press/press-releases/keylab-essential-mk3-is-here",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "arturia-keylab-essential-88-mk3",
+      "brand": "Arturia",
+      "model": "KeyLab Essential 88 mk3",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 88,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель KeyLab Essential 88 mk3: 88 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.arturia.com/company/press/press-releases",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "MIDI-контроллер на 88 клавиш для большой студийной клавиатуры.",
+        "not_for": "Нет собственного звука; инструмент крупный, и это не молоточковая пианинная механика.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ежедневно использовать все 88 клавиш Arturia KeyLab Essential 88 mk3, несмотря на большой корпус?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.arturia.com/company/press/press-releases",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-cts1",
@@ -285,7 +545,14 @@
         "question": "Будешь ли ты включать инструмент чаще благодаря тому, что он играет сам?",
         "try_in_store": "Послушай пианино тихо и громко через динамики и наушники; проверь настройку чувствительности.",
         "data_warning": "Магазин показывал общую стартовую цену для нескольких модификаций — поэтому здесь нет достоверного ценового ориентира на конкретный CT-S1."
-      }
+      },
+      "release_year": 2021,
+      "release_year_evidence": {
+        "url": "https://www.prnewswire.com/news-releases/casio-to-release-new-casiotone-digital-keyboards-with-minimalist-design-make-music-anytime-anywhere-301263747.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-cts1-76",
@@ -339,7 +606,72 @@
         "try_in_store": "Сыграй одинаковую пьесу на CT-S1 с 61 клавишей и версии на 76; оцени, правда ли нужен диапазон.",
         "question": "Будет ли дополнительная октава полезнее тебе, чем свободное место на столе?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.casio.com/intl/news/2024/0712-CT-S1-76/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "casio-ct-s100",
+      "brand": "Casio",
+      "model": "CT-S100",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": false,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель CT-S100: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.musicradar.com/reviews/casio-casiotone-lk-s250-keyboard",
+          "source_type": "report",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Базовый инструмент для знакомства с клавишами.",
+        "not_for": "Нет чувствительности к силе нажатия — важный стоп-фактор для выразительной игры.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Casio CT-S100 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2019,
+      "release_year_evidence": {
+        "url": "https://www.musicradar.com/reviews/casio-casiotone-lk-s250-keyboard",
+        "basis": "historical_publication",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-cts1000v",
@@ -393,7 +725,14 @@
         "try_in_store": "Проверь вокальный синтез и управление звуком, но оцени и самый простой сценарий: включить и сыграть аккорды.",
         "question": "Нужна ли тебе необычная вокальная функция или она лишь отвлечёт от первых занятий?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://www.casio.com/intl/news/2022/0121_emi/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-cts200",
@@ -453,7 +792,14 @@
         "try_in_store": "Не ориентируйся на число звуков: сравни CT-S200 с CT-S300 по динамике на одинаковом тембре.",
         "question": "Готов ли ты сознательно отказаться от управления динамикой?",
         "data_warning": "В документации этой модели не указана чувствительность к нажатию; в отличие от CT-S300, не учитываем её как инструмент с динамикой."
-      }
+      },
+      "release_year": 2019,
+      "release_year_evidence": {
+        "url": "https://www.musicradar.com/reviews/casio-casiotone-lk-s250-keyboard",
+        "basis": "historical_publication",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-cts300",
@@ -523,7 +869,14 @@
         "not_for": "Если хочется минималистичную панель и сосредоточиться прежде всего на звучании пианино.",
         "try_in_store": "Отключи ритмы и проверь сами клавиши; потом включи сопровождение и пойми, пригодится ли оно.",
         "question": "Будешь ли реально пользоваться ритмами и автоаккомпанементом?"
-      }
+      },
+      "release_year": 2019,
+      "release_year_evidence": {
+        "url": "https://www.musicradar.com/reviews/casio-casiotone-lk-s250-keyboard",
+        "basis": "historical_publication",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-cts400",
@@ -577,7 +930,14 @@
         "try_in_store": "Включи простой звук фортепиано, выключи сопровождение и проверь, не отвлекает ли меню от игры.",
         "question": "Ты будешь использовать 600 звуков и автоаккомпанемент, или важнее один хороший тембр и простота?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2021,
+      "release_year_evidence": {
+        "url": "https://www.prnewswire.com/news-releases/casio-to-release-new-casiotone-digital-keyboards-with-minimalist-design-make-music-anytime-anywhere-301263747.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-cts500",
@@ -631,7 +991,14 @@
         "try_in_store": "Проверь звучание электрического пианино и синтезаторного пэда; затем сравни с CT-S400 по скорости выбора тембра.",
         "question": "Ты действительно будешь сочинять на встроенных тембрах, или всё равно переключишься на VST?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://www.casio.com/intl/news/2022/0121_emi/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-ctx3000",
@@ -685,7 +1052,72 @@
         "try_in_store": "Попробуй сделать простую двухчастную аранжировку на самом инструменте и засечь количество действий.",
         "question": "Будешь ли ты записывать партии внутри клавиш или привык работать только в Reaper?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2018,
+      "release_year_evidence": {
+        "url": "https://www.casio.com/vn/electronic-musical-instruments/brands/casiotone/history/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "casio-ct-x5000",
+      "brand": "Casio",
+      "model": "CT-X5000",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель CT-X5000: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.casio.com/vn/electronic-musical-instruments/brands/casiotone/history/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для аккомпанемента, живой игры и продвинутого управления стилями.",
+        "not_for": "Крупнее простых Casiotone и с множеством функций, которые могут отвлекать.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Casio CT-X5000 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2018,
+      "release_year_evidence": {
+        "url": "https://www.casio.com/vn/electronic-musical-instruments/brands/casiotone/history/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "casio-ctx700",
@@ -739,7 +1171,130 @@
         "try_in_store": "Поставь CT-X700 на реальный стол и сравни доступность клавиш, экрана и управление с CT-S400.",
         "question": "Нужно ли тебе обучающее меню с аккомпанементом или проще обойтись без него?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2018,
+      "release_year_evidence": {
+        "url": "https://www.casio.com/vn/electronic-musical-instruments/brands/casiotone/history/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "casio-lk-s250",
+      "brand": "Casio",
+      "model": "LK-S250",
+      "type": "portable_keyboard",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель LK-S250: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.musicradar.com/reviews/casio-casiotone-lk-s250-keyboard",
+          "source_type": "report",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Бюджетная обучающая клавиатура с подсветкой при удачной цене б/у.",
+        "not_for": "Сравни звук, состояние и функции с более свежей LK-S450.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Casio LK-S250 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2019,
+      "release_year_evidence": {
+        "url": "https://www.musicradar.com/reviews/casio-casiotone-lk-s250-keyboard",
+        "basis": "historical_publication",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "casio-lk-s450",
+      "brand": "Casio",
+      "model": "LK-S450",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель LK-S450: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.prnewswire.com/news-releases/casio-to-release-new-casiotone-digital-keyboards-with-minimalist-design-make-music-anytime-anywhere-301263747.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Самостоятельный инструмент с подсветкой клавиш для обучения.",
+        "not_for": "Подсветка не заменяет игру на слух; сравни с CT-S400 без учебных лампочек.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Casio LK-S450 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2021,
+      "release_year_evidence": {
+        "url": "https://www.prnewswire.com/news-releases/casio-to-release-new-casiotone-digital-keyboards-with-minimalist-design-make-music-anytime-anywhere-301263747.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "korg-ek50",
@@ -793,7 +1348,14 @@
         "try_in_store": "Сыграй минуту без сопровождения, затем включи стиль и посмотри, добавляет ли это вдохновения.",
         "question": "Будешь ли использовать встроенный аранжировщик каждый день, или он только усложнит работу?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2018,
+      "release_year_evidence": {
+        "url": "https://www.korg.com/us/news/?b=3&id=36",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "korg-i3",
@@ -849,7 +1411,10 @@
         "try_in_store": "Попроси показать, как быстро создать и сохранить несколько дорожек, и заранее уточни способ аудиовывода.",
         "question": "Нужна ли тебе отдельная рабочая станция, когда на компьютере уже есть Reaper?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": null,
+      "release_year_evidence": null,
+      "release_year_status": "unknown"
     },
     {
       "id": "korg-keystage61",
@@ -903,7 +1468,130 @@
         "try_in_store": "Открой VSTi с polyphonic aftertouch и попробуй давить на разные удерживаемые клавиши независимо.",
         "question": "Нужна ли тебе тонкая выразительность aftertouch уже сейчас или лучше сэкономить на базовой клавиатуре?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://korgmusic.ru/news/korg-keystage-novoe-slovo-v-midi-kontrollerakh/",
+        "basis": "dated_press_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "korg-krome-ex-61",
+      "brand": "Korg",
+      "model": "KROME EX-61",
+      "type": "synthesizer",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель KROME EX-61: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.shimamura.co.jp/update/digital-dj/2019/01/dl-128734/",
+          "source_type": "report",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Подержанная рабочая станция с большим количеством готовых звуков.",
+        "not_for": "Нет динамиков; старый интерфейс и риск износа — проверь перед покупкой.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Korg KROME EX-61, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2019,
+      "release_year_evidence": {
+        "url": "https://www.shimamura.co.jp/update/digital-dj/2019/01/dl-128734/",
+        "basis": "dated_retailer_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "korg-krome-ex-73",
+      "brand": "Korg",
+      "model": "KROME EX-73",
+      "type": "synthesizer",
+      "market_status": "legacy",
+      "keys": 73,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель KROME EX-73: 73 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.shimamura.co.jp/update/digital-dj/2019/01/dl-128734/",
+          "source_type": "report",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Сценическая/студийная рабочая станция на 73 клавиши.",
+        "not_for": "Выход на внешний звук обязателен, устройство крупное и нередко б/у.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Korg KROME EX-73, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2019,
+      "release_year_evidence": {
+        "url": "https://www.shimamura.co.jp/update/digital-dj/2019/01/dl-128734/",
+        "basis": "dated_retailer_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "korg-kross2-61",
@@ -957,7 +1645,14 @@
         "try_in_store": "Подключи наушники, выбери лид, пэд и пианино, затем посмотри, сколько шагов занимает смена звука.",
         "question": "Хочешь ли ты звуки в самостоятельном устройстве или удобнее хранить их в программных инструментах?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2017,
+      "release_year_evidence": {
+        "url": "https://www.korg.com/uk/news/2017/0901/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "korg-microarranger",
@@ -1016,7 +1711,10 @@
         "try_in_store": "Проверь все 61 клавишу, динамики, питание, кнопки и возможность получить нужные аксессуары.",
         "question": "Насколько ты готов рисковать с состоянием и обслуживанием старой модели?",
         "data_warning": "Архивная модель: совместимость с современным компьютером, порты, состояние и стоимость ремонта конкретного экземпляра требуют отдельной проверки."
-      }
+      },
+      "release_year": null,
+      "release_year_evidence": null,
+      "release_year_status": "unknown"
     },
     {
       "id": "korg-microkeyair-61",
@@ -1075,7 +1773,14 @@
         "not_for": "Если Bluetooth воспринимается как способ получать звук без компьютера: это только передача MIDI.",
         "try_in_store": "Проверь вживую соединение с конкретным устройством и задержку; сравни с USB.",
         "question": "Ради какой конкретной задачи тебе нужен беспроводной MIDI, если есть USB?"
-      }
+      },
+      "release_year": 2016,
+      "release_year_evidence": {
+        "url": "https://www.korg.com/jp/products/computergear/microkey2/index.php",
+        "basis": "manufacturer_product_history",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "korg-microkey2-61",
@@ -1150,7 +1855,14 @@
         "not_for": "Если захочешь играть в любой момент без компьютера или другого MIDI-хоста.",
         "try_in_store": "Попробуй двумя руками аккорд и мелодию, затем запиши тихие и громкие MIDI-ноты.",
         "question": "Сможешь ли ты держать готовый шаблон Reaper, чтобы не тратить каждый раз время на настройку?"
-      }
+      },
+      "release_year": 2015,
+      "release_year_evidence": {
+        "url": "https://www.korg.com/jp/products/computergear/microkey2/index.php",
+        "basis": "manufacturer_product_history",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "m-audio-keystation61-mk3",
@@ -1217,7 +1929,14 @@
         "not_for": "Если принципиальны мини-клавиши или самостоятельный звук.",
         "try_in_store": "Сравни усилие клавиш с двумя другими моделями; проверь, не мешает ли почти метровая ширина.",
         "question": "Готов ли ты пожертвовать компактностью ради привычных полноразмерных клавиш?"
-      }
+      },
+      "release_year": 2018,
+      "release_year_evidence": {
+        "url": "https://www.m-audio.com/news/articles/m-audio-updates-renowned-keystation-series-the-worlds-best-selling-usb-midi",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "maudio-oxygen61-mkv",
@@ -1270,7 +1989,14 @@
         "try_in_store": "Открой Reaper и проверь скорость назначений фейдеров и контроллеров, а не только ощущения клавиш.",
         "question": "Ты намерен использовать фейдеры и пэды или достаточно минимального MIDI-контроллера?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2021,
+      "release_year_evidence": {
+        "url": "https://www.musicplayers.com/2021/04/m-audio-introduces-the-new-oxygen-series-mkv-keyboard-controllers/",
+        "basis": "dated_press_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "maudio-oxygenpro61",
@@ -1323,7 +2049,130 @@
         "try_in_store": "Сравни плавность тихих нажатий, отдачу полувзвешенных клавиш и выразительность aftertouch в VST.",
         "question": "Услышишь ли ты практическую разницу от aftertouch или это функция для далёкого будущего?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2020,
+      "release_year_evidence": {
+        "url": "https://musictech.com/news/gear/m-audio-oxygen-pro/",
+        "basis": "dated_press_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "native-instruments-kontrol-s49-mk3",
+      "brand": "Native Instruments",
+      "model": "Kontrol S49 MK3",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 49,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель Kontrol S49 MK3: 49 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.native-instruments.com/de/pages/press-kontrol-s-series-mk3",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Компактнее S61 с тем же подходом к управлению программными звуками.",
+        "not_for": "49 клавиш ниже твоего обычного минимума и нет встроенного звука.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Native Instruments Kontrol S49 MK3 в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://www.native-instruments.com/de/pages/press-kontrol-s-series-mk3",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "native-instruments-kontrol-s61-mk3",
+      "brand": "Native Instruments",
+      "model": "Kontrol S61 MK3",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель Kontrol S61 MK3: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.native-instruments.com/de/pages/press-kontrol-s-series-mk3",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для работы с NKS-плагинами и выразительными программными звуками.",
+        "not_for": "Лучшее раскрытие функций — в экосистеме NI; для простого MIDI в Reaper может быть избыточен.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Native Instruments Kontrol S61 MK3 в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://www.native-instruments.com/de/pages/press-kontrol-s-series-mk3",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "nektar-impactgx49",
@@ -1376,7 +2225,14 @@
         "try_in_store": "Попробуй сыграть несколько аккордов левой рукой одновременно с мелодией правой без переключения октавы.",
         "question": "Потеря одной октавы будет мешать или выигрыш места на столе окажется важнее?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2016,
+      "release_year_evidence": {
+        "url": "https://www.ask.video/article/news/nektar-introduce-new-impact-gx49-gx61-usb-midi-controller-keyboards",
+        "basis": "dated_press_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "nektar-impactgx61",
@@ -1429,7 +2285,130 @@
         "try_in_store": "Сравни ход клавиш и свободное место для мыши на столе с SE61 и M-Audio Keystation.",
         "question": "Нужен ли тебе базовый инструмент для игры или хочется много дополнительных контроллеров?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2016,
+      "release_year_evidence": {
+        "url": "https://www.ask.video/article/news/nektar-introduce-new-impact-gx49-gx61-usb-midi-controller-keyboards",
+        "basis": "dated_press_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "nektar-impact-lx49",
+      "brand": "Nektar",
+      "model": "Impact LX49+",
+      "type": "midi_controller",
+      "market_status": "legacy",
+      "keys": 49,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель Impact LX49+: 49 клавиш, проверка поколения и типа устройства",
+          "url": "https://support.nektartech.com/nektar-impact-lx-plus-nektar-bring-their-impact-lx-range-of-usb-midi-controller-keyboards-to-the-next-level/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Компактный контроллер с интеграцией DAW на вторичном рынке.",
+        "not_for": "49 клавиш ниже желаемого минимума; нет собственного звука.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Nektar Impact LX49+ в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2016,
+      "release_year_evidence": {
+        "url": "https://support.nektartech.com/nektar-impact-lx-plus-nektar-bring-their-impact-lx-range-of-usb-midi-controller-keyboards-to-the-next-level/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "nektar-impact-lx61",
+      "brand": "Nektar",
+      "model": "Impact LX61+",
+      "type": "midi_controller",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель Impact LX61+: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://support.nektartech.com/nektar-impact-lx-plus-nektar-bring-their-impact-lx-range-of-usb-midi-controller-keyboards-to-the-next-level/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Бюджетный MIDI-контроллер с управлением Reaper и пэдами.",
+        "not_for": "Уточняй состояние и совместимость с текущей операционной системой; поколение не новое.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Nektar Impact LX61+ в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2016,
+      "release_year_evidence": {
+        "url": "https://support.nektartech.com/nektar-impact-lx-plus-nektar-bring-their-impact-lx-range-of-usb-midi-controller-keyboards-to-the-next-level/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "nektar-se61",
@@ -1496,7 +2475,130 @@
         "not_for": "Если обязательно нужен собственный звук или подтверждённые габариты для очень узкого стола.",
         "try_in_store": "Проверь не только ощущение клавиш, но и возможность комфортно играть очень тихо.",
         "question": "Не окажется ли экономия меньше ценности возможности включить инструмент без компьютера?"
-      }
+      },
+      "release_year": 2021,
+      "release_year_evidence": {
+        "url": "https://www.kvraudio.com/news/nektar-launches-se61-usb-midi-keyboard-controller-51943/",
+        "basis": "dated_press_report",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "novation-flkey-2-49",
+      "brand": "Novation",
+      "model": "FLkey 2 49",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 49,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": 730,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель FLkey 2 49: 49 клавиш, проверка поколения и типа устройства",
+          "url": "https://us.novationmusic.com/articles/introducing-the-new-flkey-the-go-to-controller-for-fl-studio/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "49-клавишный FLkey 2 для записи партий и работы в FL Studio.",
+        "not_for": "Для твоего желания иметь 61 клавишу диапазон может оказаться недостаточным.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Novation FLkey 2 49 в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2026,
+      "release_year_evidence": {
+        "url": "https://us.novationmusic.com/articles/introducing-the-new-flkey-the-go-to-controller-for-fl-studio/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "novation-flkey-2-61",
+      "brand": "Novation",
+      "model": "FLkey 2 61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": 895,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель FLkey 2 61: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://us.novationmusic.com/articles/introducing-the-new-flkey-the-go-to-controller-for-fl-studio/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Новая 61-клавишная версия FLkey, ориентированная на FL Studio.",
+        "not_for": "Глубокая интеграция рассчитана на FL Studio; для Reaper польза дополнительных кнопок меньше.",
+        "try_in_store": "Подключи к Reaper и проверь задержку, динамику, аккорды и длину USB-кабеля.",
+        "question": "Будешь ли ты использовать дополнительные органы управления Novation FLkey 2 61 в Reaper или достаточно клавиш?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2026,
+      "release_year_evidence": {
+        "url": "https://us.novationmusic.com/articles/introducing-the-new-flkey-the-go-to-controller-for-fl-studio/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "novation-launchkey49-mk4",
@@ -1549,7 +2651,14 @@
         "try_in_store": "В Reaper попробуй аккорды левой рукой и мелодию правой; не забывай о настройке MIDI-контроллера.",
         "question": "Хватит ли тебе четырёх октав, или полезнее 61 клавиша при почти такой же рабочей схеме?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://novationmusic.com/articles/introducing-the-new-launchkey-the-creative-controller/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "novation-launchkey61-mk4",
@@ -1602,7 +2711,246 @@
         "try_in_store": "Попроси продемонстрировать работу с Reaper через стандартный MIDI/HUI, а не только Ableton или Logic.",
         "question": "Будешь ли ты пользоваться контроллерами и режимами аккордов или важнее простая клавиатура?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://novationmusic.com/articles/introducing-the-new-launchkey-the-creative-controller/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-fantom-06",
+      "brand": "Roland",
+      "model": "FANTOM-06",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель FANTOM-06: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/us/company/press_releases/2022/Roland-Introduces-FANTOM-0-Synthesizer-Keyboard-Se/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Комплексная музыкальная станция для записи, сценических партий и синтеза.",
+        "not_for": "Нет динамиков; для простого старта высокая сложность.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Roland FANTOM-06, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/us/company/press_releases/2022/Roland-Introduces-FANTOM-0-Synthesizer-Keyboard-Se/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-fantom-07",
+      "brand": "Roland",
+      "model": "FANTOM-07",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель FANTOM-07: 76 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/us/company/press_releases/2022/Roland-Introduces-FANTOM-0-Synthesizer-Keyboard-Se/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для исполнения и записи с расширенным диапазоном и секвенсором.",
+        "not_for": "Велик и дорог; встроенных динамиков нет.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Roland FANTOM-07, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/us/company/press_releases/2022/Roland-Introduces-FANTOM-0-Synthesizer-Keyboard-Se/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-fantom-08",
+      "brand": "Roland",
+      "model": "FANTOM-08",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 88,
+      "key_size": "standard",
+      "action": "weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель FANTOM-08: 88 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/us/company/press_releases/2022/Roland-Introduces-FANTOM-0-Synthesizer-Keyboard-Se/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Клавишная рабочая станция со взвешенной механикой для пианиста-продюсера.",
+        "not_for": "Занимает много места и требует внешнего звука/наушников.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Будешь ли ежедневно использовать все 88 клавиш Roland FANTOM-08, несмотря на большой корпус?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/us/company/press_releases/2022/Roland-Introduces-FANTOM-0-Synthesizer-Keyboard-Se/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-go-keys-go-61k",
+      "brand": "Roland",
+      "model": "GO:KEYS (GO-61K)",
+      "type": "portable_keyboard",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель GO:KEYS (GO-61K): 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/jp/news/0728/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Компактный и весёлый вариант для импровизации при покупке б/у.",
+        "not_for": "Старое поколение GO:KEYS: сравни с GO:KEYS 3/5; состояние важнее характеристик на бумаге.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Roland GO:KEYS (GO-61K) без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2017,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/jp/news/0728/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "roland-gokeys3",
@@ -1688,7 +3036,14 @@
         "not_for": "Если нужен просто дешёвый и максимально лаконичный инструмент без обилия функций.",
         "try_in_store": "Выбери один любимый звук, сыграй без автоаккомпанемента и сравни ощущения с более простой моделью.",
         "question": "Будешь ли действительно использовать сопровождения и дополнительные звуки, за которые доплачиваешь?"
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/us/company/press_releases/2024/Roland-Announces-GO-KEYS-3-and-GO-KEYS-5-Music-Cre/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "roland-gokeys5",
@@ -1742,7 +3097,130 @@
         "try_in_store": "Выбери три тембра, запиши короткую музыкальную идею и проверь, насколько быстро переключается режим.",
         "question": "Помогут ли тебе аккордовые секвенции сочинять песни или ты предпочитаешь всё сыграть самостоятельно?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/us/company/press_releases/2024/Roland-Announces-GO-KEYS-3-and-GO-KEYS-5-Music-Cre/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-go-piano-go-61p",
+      "brand": "Roland",
+      "model": "GO:PIANO (GO-61P)",
+      "type": "portable_keyboard",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель GO:PIANO (GO-61P): 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/jp/news/0728/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Пианино-ориентированный вариант на 61 полноразмерную клавишу.",
+        "not_for": "Более старый инструмент; сравни с Casio CT-S1 и Yamaha NP-15.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Roland GO:PIANO (GO-61P) без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2017,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/jp/news/0728/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-go-piano88-go-88px",
+      "brand": "Roland",
+      "model": "GO:PIANO88 (GO-88PX)",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 88,
+      "key_size": "standard",
+      "action": "piano",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": 1280,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель GO:PIANO88 (GO-88PX): 88 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/us/company/press_releases/2025/Roland-Announces-GO-PIANO88-Digital-Piano/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Лёгкое для своей категории полнодиапазонное цифровое пианино.",
+        "not_for": "Несмотря на малый вес, длина 128 см может оказаться критичной.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Будешь ли ежедневно использовать все 88 клавиш Roland GO:PIANO88 (GO-88PX), несмотря на большой корпус?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2025,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/us/company/press_releases/2025/Roland-Announces-GO-PIANO88-Digital-Piano/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "roland-junod6",
@@ -1798,7 +3276,130 @@
         "try_in_store": "Подключи наушники, переключи три сцены и проверь, насколько быстро можно записать идею по USB.",
         "question": "Тебе нужен самостоятельный звуковой движок без встроенных динамиков или достаточно MIDI и Reaper?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/global/company/press_releases/2024/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-juno-d7",
+      "brand": "Roland",
+      "model": "JUNO-D7",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель JUNO-D7: 76 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/global/company/press_releases/2024/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "76 клавиш для репетиций и выступлений с собственным звуковым движком.",
+        "not_for": "Нужен внешний звуковой тракт; диапазон и корпус заметно больше 61.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Roland JUNO-D7, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/global/company/press_releases/2024/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "roland-rd-08",
+      "brand": "Roland",
+      "model": "RD-08",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 88,
+      "key_size": "standard",
+      "action": "weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель RD-08: 88 клавиш, проверка поколения и типа устройства",
+          "url": "https://www.roland.com/us/company/press_releases/2024/Roland-Announces-RD-08-Stage-Piano/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Сценическое пианино для выразительной игры с 88 клавишами.",
+        "not_for": "Для маленького стола 88 клавиш — большой компромисс по месту.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Будешь ли ежедневно использовать все 88 клавиш Roland RD-08, несмотря на большой корпус?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://www.roland.com/us/company/press_releases/2024/Roland-Announces-RD-08-Stage-Piano/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-ck61",
@@ -1852,7 +3453,72 @@
         "try_in_store": "Сравни три собственных тембра — акустическое пианино, Rhodes и орган — при одинаковой громкости.",
         "question": "Оправдывает ли более музыкальная панель управления переход от недорогого автономного инструмента?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://jp.yamaha.com/musical-instruments/keyboards/explore/synth-50th/chronology/index02.html",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-ck88",
+      "brand": "Yamaha",
+      "model": "CK88",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 88,
+      "key_size": "standard",
+      "action": "weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель CK88: 88 клавиш, проверка поколения и типа устройства",
+          "url": "https://jp.yamaha.com/musical-instruments/keyboards/explore/synth-50th/chronology/index02.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Пианино и живые клавишные звуки с полным 88-клавишным диапазоном.",
+        "not_for": "Это уже крупный клавишный инструмент, а не компактная MIDI-клавиатура.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Будешь ли ежедневно использовать все 88 клавиш Yamaha CK88, несмотря на большой корпус?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://jp.yamaha.com/musical-instruments/keyboards/explore/synth-50th/chronology/index02.html",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-ez310",
@@ -1906,7 +3572,304 @@
         "try_in_store": "Попробуй одну и ту же мелодию с подсветкой и без неё, затем сыграй по памяти, не глядя.",
         "question": "Будет ли световая подсказка помогать учиться или превратит игру в механическое нажатие подсвеченных клавиш?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-modx-m6",
+      "brand": "Yamaha",
+      "model": "MODX M6",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель MODX M6: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://usa.yamaha.com/news_events/2025/yamaha-unveils-modx-m-synthesizer.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для глубокой работы со звуками FM и синтезом при создании музыки.",
+        "not_for": "Нужны наушники/мониторы; инструмент профессиональный и не компактный бюджетный старт.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Yamaha MODX M6, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2025,
+      "release_year_evidence": {
+        "url": "https://usa.yamaha.com/news_events/2025/yamaha-unveils-modx-m-synthesizer.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-modx-m7",
+      "brand": "Yamaha",
+      "model": "MODX M7",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель MODX M7: 76 клавиш, проверка поколения и типа устройства",
+          "url": "https://usa.yamaha.com/news_events/2025/yamaha-unveils-modx-m-synthesizer.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Синтезатор с расширенным диапазоном для студии и сцены.",
+        "not_for": "Больше места и расходы; встроенных динамиков нет.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Yamaha MODX M7, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2025,
+      "release_year_evidence": {
+        "url": "https://usa.yamaha.com/news_events/2025/yamaha-unveils-modx-m-synthesizer.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-modx6",
+      "brand": "Yamaha",
+      "model": "MODX6+",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель MODX6+: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://jp.yamaha.com/musical-instruments/keyboards/explore/synth-50th/chronology/index02.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Предыдущее поколение MODX: гибкий звуковой движок и управление синтезом.",
+        "not_for": "Не имеет встроенных динамиков; при покупке сравни с MODX M6 и состоянием рынка.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Yamaha MODX6+, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://jp.yamaha.com/musical-instruments/keyboards/explore/synth-50th/chronology/index02.html",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-modx7",
+      "brand": "Yamaha",
+      "model": "MODX7+",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель MODX7+: 76 клавиш, проверка поколения и типа устройства",
+          "url": "https://jp.yamaha.com/musical-instruments/keyboards/explore/synth-50th/chronology/index02.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Больше клавиш для исполнителя, которому нужен серьёзный синтез.",
+        "not_for": "Для небольшой комнаты и редких домашних сессий может оказаться громоздким.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Yamaha MODX7+, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://jp.yamaha.com/musical-instruments/keyboards/explore/synth-50th/chronology/index02.html",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-np-12",
+      "brand": "Yamaha",
+      "model": "NP-12",
+      "type": "portable_keyboard",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель NP-12: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://usa.yamaha.com/news_events/2016/20160121_piaggero_portable_keyboards_us.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Лаконичный пианино-ориентированный б/у инструмент на 61 клавишу.",
+        "not_for": "По функциям и звукам уступает новым NP-15/NP-35; оценить разницу лучше вживую.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Yamaha NP-12 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2016,
+      "release_year_evidence": {
+        "url": "https://usa.yamaha.com/news_events/2016/20160121_piaggero_portable_keyboards_us.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-np15",
@@ -1960,7 +3923,72 @@
         "try_in_store": "Сравни тихую динамику, повтор одних нот и ощущение клавиш с Casio CT-S1 и Yamaha PSR-E383.",
         "question": "Тебе важнее ощущение инструмента, близкого к пианино, или разнообразие синтезаторных тембров?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://www.yamaha.com/ja/news_release/2023/23060601/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-np-32",
+      "brand": "Yamaha",
+      "model": "NP-32",
+      "type": "portable_keyboard",
+      "market_status": "legacy",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель NP-32: 76 клавиш, проверка поколения и типа устройства",
+          "url": "https://usa.yamaha.com/news_events/2016/20160121_piaggero_portable_keyboards_us.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Лёгкое пианино с большим диапазоном на вторичном рынке.",
+        "not_for": "Широкий корпус и возраст: внимательно проверь клавиши и питание.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Насколько тебе нужен расширенный диапазон в Yamaha NP-32, если места для корпуса немного?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2016,
+      "release_year_evidence": {
+        "url": "https://usa.yamaha.com/news_events/2016/20160121_piaggero_portable_keyboards_us.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-np35",
@@ -2014,7 +4042,188 @@
         "try_in_store": "Проверь вес нажатия в нижнем и верхнем регистрах и удобство игры двумя руками сидя.",
         "question": "Готов ли ты отдать больше места ради 76 клавиш и градации чувствительности по диапазону?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://www.yamaha.com/ja/news_release/2023/23060601/",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-p-145",
+      "brand": "Yamaha",
+      "model": "P-145",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 88,
+      "key_size": "standard",
+      "action": "weighted",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель P-145: 88 клавиш, проверка поколения и типа устройства",
+          "url": "https://jp.yamaha.com/musical-instruments/pianos/products/p-series/p-145/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Когда важны ощущения фортепианной клавиатуры и 88 клавиш.",
+        "not_for": "Занимает существенно больше места и не имеет множества синтезаторных органов управления.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Будешь ли ежедневно использовать все 88 клавиш Yamaha P-145, несмотря на большой корпус?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2023,
+      "release_year_evidence": {
+        "url": "https://jp.yamaha.com/musical-instruments/pianos/products/p-series/p-145/",
+        "basis": "manufacturer_product_release",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-psr-e283",
+      "brand": "Yamaha",
+      "model": "PSR-E283",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": false,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": null,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель PSR-E283: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://jp.yamaha.com/musical-instruments/keyboards/products/portable-keyboards/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Недорогой учебный вариант для знакомства с клавиатурой.",
+        "not_for": "Нет динамической чувствительности к нажатию — при твоих базовых требованиях не подходит.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Готов отказаться от выразительной динамики ради цены?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://jp.yamaha.com/musical-instruments/keyboards/products/portable-keyboards/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-psr-e373",
+      "brand": "Yamaha",
+      "model": "PSR-E373",
+      "type": "portable_keyboard",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель PSR-E373: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Б/у или уценённый вариант для самостоятельного музицирования.",
+        "not_for": "Более старая серия: сравни стоимость с PSR-E383 и состояние кнопок/клавиш.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Yamaha PSR-E373 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2020,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-psre383",
@@ -2100,7 +4309,14 @@
         "not_for": "Если критична малая глубина корпуса или минимальное число кнопок.",
         "try_in_store": "Проверь, удобна ли глубина 31,7 см на столе, и попробуй играть без автоаккомпанемента.",
         "question": "Нужны ли тебе учебные и аккомпанирующие функции, или ты ими почти не воспользуешься?"
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-psre473",
@@ -2154,7 +4370,188 @@
         "try_in_store": "Выключи стили, сыграй три короткие партии, затем попробуй запись звука через USB в компьютер.",
         "question": "Ты хочешь создавать законченные аранжировки в клавишах или записывать простые MIDI-партии?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://au.yamaha.com/en/musical-instruments/keyboards/news/2022/PSR-E473-and-PSR-EW425-launch.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-psr-e483",
+      "brand": "Yamaha",
+      "model": "PSR-E483",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель PSR-E483: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://vn.yamaha.com/vi/news/2026/psr-e483-va-psr-e583-bo-doi-keyboard-moi-nhat-cua-yamaha-chinh-thuc-ra-mat.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для домашней игры, аранжировки и быстрых музыкальных набросков без компьютера.",
+        "not_for": "Множество стилей и кнопок может мешать, если нужен только хороший звук пианино.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Хочешь автосопровождение и эффекты — или минимум управления?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2026,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/news/2026/psr-e483-va-psr-e583-bo-doi-keyboard-moi-nhat-cua-yamaha-chinh-thuc-ra-mat.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-psr-e583",
+      "brand": "Yamaha",
+      "model": "PSR-E583",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель PSR-E583: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://vn.yamaha.com/vi/news/2026/psr-e483-va-psr-e583-bo-doi-keyboard-moi-nhat-cua-yamaha-chinh-thuc-ra-mat.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для игры и аранжировок с расширенным контролем, когда нужен самостоятельный инструмент.",
+        "not_for": "Если нужны лишь простые аккорды и пианино, переплата за функции может быть лишней.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Yamaha PSR-E583 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2026,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/news/2026/psr-e483-va-psr-e583-bo-doi-keyboard-moi-nhat-cua-yamaha-chinh-thuc-ra-mat.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-psr-ew310",
+      "brand": "Yamaha",
+      "model": "PSR-EW310",
+      "type": "portable_keyboard",
+      "market_status": "legacy",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель PSR-EW310: 76 клавиш, проверка поколения и типа устройства",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Когда важны 76 клавиш, но бюджет направляет к предыдущим поколениям.",
+        "not_for": "Шире большинства 61-клавишных моделей; проверь место и состояние б/у.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Насколько тебе нужен расширенный диапазон в Yamaha PSR-EW310, если места для корпуса немного?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2020,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-psrew320",
@@ -2208,7 +4605,14 @@
         "try_in_store": "Проверь, удобно ли тебе растянуть обе руки на 76 клавишах, и попробуй настройку Touch Response.",
         "question": "Тебе действительно нужен дополнительный диапазон или удобнее компактный 61-клавишный инструмент?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-psrew425",
@@ -2262,7 +4666,14 @@
         "try_in_store": "Сравни полноту диапазона и качество собственных динамиков с меньшей Yamaha PSR-E473.",
         "question": "Используешь ли ты 76 клавиш в своих композициях настолько часто, чтобы оправдать размеры?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2022,
+      "release_year_evidence": {
+        "url": "https://au.yamaha.com/en/musical-instruments/keyboards/news/2022/PSR-E473-and-PSR-EW425-launch.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     },
     {
       "id": "yamaha-psrsx600",
@@ -2315,10 +4726,191 @@
         "try_in_store": "Попробуй за пять минут собрать простую песню со вступлением, куплетом и припевом без подсказок продавца.",
         "question": "Ты хочешь самостоятельную музыкальную станцию или просто клавиатуру, на которой приятно играть?",
         "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
-      }
+      },
+      "release_year": 2020,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/explore/pk-45th/chronology/2010_2020/",
+        "basis": "manufacturer_chronology",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-psr-sx720",
+      "brand": "Yamaha",
+      "model": "PSR-SX720",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель PSR-SX720: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/news/2024/yamaha-psr-sx-roadshow.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для аранжировок и живого аккомпанемента, когда автоматические стили действительно нужны.",
+        "not_for": "Избыточный и дорогой вариант, если цель — наконец играть по 15 минут вечером.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Yamaha PSR-SX720 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/news/2024/yamaha-psr-sx-roadshow.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-psr-sx920",
+      "brand": "Yamaha",
+      "model": "PSR-SX920",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель PSR-SX920: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/news/2024/yamaha-psr-sx-roadshow.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Полноценная аранжировочная рабочая станция для выступлений.",
+        "not_for": "Сложность и стоимость несоразмерны простому старту.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Сядешь ли ты играть на Yamaha PSR-SX920 без подготовки или его функции будут отвлекать от музыки?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2024,
+      "release_year_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/news/2024/yamaha-psr-sx-roadshow.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
+    },
+    {
+      "id": "yamaha-yc61",
+      "brand": "Yamaha",
+      "model": "YC61",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "organ_waterfall",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Модель YC61: 61 клавиш, проверка поколения и типа устройства",
+          "url": "https://usa.yamaha.com/news_events/2020/yamaha_yc61_stage_keyboard.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "spec_release_source_no_local_stock",
+      "editorial": {
+        "best_for": "Для любителей органа, электропиано и живого управления звуком.",
+        "not_for": "Сценический инструмент без встроенных динамиков; цена и специфика клавиатуры не для всех.",
+        "try_in_store": "Сыграй один и тот же аккорд тихо и громко, проверь все порты и быстрый запуск.",
+        "question": "Нужен ли тебе собственный звуковой движок Yamaha YC61, если колонки или наушники обязательны?",
+        "data_warning": "Наличие и цена во Вьетнаме не подтверждены; сверь точную модификацию и комплект до оплаты."
+      },
+      "release_year": 2020,
+      "release_year_evidence": {
+        "url": "https://usa.yamaha.com/news_events/2020/yamaha_yc61_stage_keyboard.html",
+        "basis": "manufacturer_announcement",
+        "checked_at": "2026-11-06"
+      },
+      "release_year_status": "sourced"
     }
   ],
-  "description": "Editorial guidance with 11 per-model fit/avoid/try/decision questions. Spec and offer claims remain source referenced; editorial is interpretation not product review.",
+  "description": "Catalog enriched with independently sourced original-model release years, exact-variant evidence, and separated keyboard/synth/MIDI types.",
   "data_policy": {
     "hard_constraints_unknown": "review_needed_not_false",
     "price_snapshots_are_not_inventory": true,
@@ -2326,5 +4918,13 @@
     "source_of_truth": "manufacturer_for_specs_retailer_for_offer",
     "unknown_in_hard_budget": "verification_required",
     "last_reviewed_local_date": "2026-11-06"
+  },
+  "year_policy": {
+    "meaning": "first model release / dated launch, not manufacturing year, firmware date or resale listing",
+    "unknown_is_null": true,
+    "unknown_display": "Год не подтверждён",
+    "sources_required": true,
+    "year_is_not_market_availability": true,
+    "verified_at": "2026-11-06"
   }
 }
