@@ -325,3 +325,61 @@ footer span:last-child { max-width: 440px; text-align: right; }
 .unverified-note { color: var(--muted); }
 .advanced-content input[type=number] { max-width: 100%; }
 @media (max-width: 560px) { .spec-citation { display:block; } .spec-citation > * { display:block; margin-bottom:6px; } }
+
+
+/* Motion system v1.7 — one-shot, composited, and quiet. No perpetual loops. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fade-rise {
+    from { opacity: 0; transform: translate3d(0, 10px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  @keyframes detail-arrive {
+    from { opacity: 0; transform: translate3d(0, 7px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  @keyframes accent-reveal {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+  }
+  .motion-enabled .hero-label { animation: fade-rise 380ms cubic-bezier(.2,.65,.2,1) both; }
+  .motion-enabled .hero h1 { animation: fade-rise 470ms cubic-bezier(.2,.65,.2,1) 65ms both; }
+  .motion-enabled .hero p { animation: fade-rise 460ms cubic-bezier(.2,.65,.2,1) 120ms both; }
+  .motion-enabled .hero-meta { animation: fade-rise 440ms cubic-bezier(.2,.65,.2,1) 165ms both; }
+  [data-motion="enter"] { animation: fade-rise 300ms cubic-bezier(.2,.65,.2,1) var(--enter-delay,0ms) both; }
+  .motion-detail { animation: detail-arrive 245ms cubic-bezier(.2,.65,.2,1) both; }
+  .advanced[open] > .advanced-content,
+  .learning-note[open] > .learning-grid,
+  .detail-check[open] > ul { animation: detail-arrive 215ms ease-out both; }
+  [data-motion="enter"].featured::before { transform-origin: top center; animation: accent-reveal 420ms ease-out 85ms both; }
+  .option-row.motion-pill { position: relative; isolation: isolate; }
+  .option-row.motion-pill::before {
+    content: ''; position: absolute; top: 3px; bottom: 3px; left: 0; z-index: 0;
+    width: var(--pill-width,0px); background: #373836; border-radius: 5px;
+    box-shadow: 0 1px 5px #0003; pointer-events: none;
+    transform: translate3d(var(--pill-x,0px),0,0);
+    transition: transform 275ms cubic-bezier(.22,.78,.25,1), width 220ms cubic-bezier(.22,.78,.25,1);
+  }
+  .option-row.motion-pill.pill-instant::before { transition: none; }
+  .option-row.motion-pill button { position: relative; z-index: 1; }
+  .option-row.motion-pill button.selected { background: transparent; box-shadow: none; }
+  .choice-stack button, .add-btn, .filter-tabs button, .more-button {
+    transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+  }
+  .rec-card, .product-row { transition: border-color 170ms ease, background-color 170ms ease, transform 180ms ease; }
+  .nav-count { transition: color 180ms ease, border-color 180ms ease; }
+  .toast { transition: opacity 210ms ease, transform 210ms cubic-bezier(.2,.65,.2,1); }
+  @media (hover:hover) and (pointer:fine) {
+    .rec-card:hover { transform: translate3d(0,-2px,0); }
+    .choice-stack button:hover { background-color: #2c2e2f; }
+    .choice-stack button.selected:hover { background-color: #302d27; }
+  }
+  @media (max-width:560px) {
+    .compare-dock:not([hidden]) { animation: detail-arrive 245ms cubic-bezier(.2,.65,.2,1) both; }
+  }
+}
+/* A reduced-motion preference overrides even inherited transition rules. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-motion="enter"], .motion-detail { opacity: 1; transform: none; }
+  .option-row.motion-pill::before { transition: none !important; }
+}
