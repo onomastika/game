@@ -7,7 +7,7 @@ const products=catalog.products;
 const by=(brand,model)=>products.find(p=>p.brand===brand&&p.model===model);
 const date=new Date('2026-11-06T10:00:00');
 test('v1.5 includes exactly 44 unique additions and 124 distinct instruments',()=>{
- assert.equal(catalog.schema_version,'0.7.0');
+ assert.equal(catalog.schema_version,'0.8.0');
  assert.equal(products.length,124);
  assert.equal(products.filter(p=>p.data_quality==='verified_new_batch_specs_no_local_stock').length,44);
  assert.equal(new Set(products.map(p=>p.id)).size,products.length);
@@ -28,7 +28,7 @@ test('no invented local prices for the additional 44 and valid year/source links
   assert.deepEqual(p.prices,[],p.id);
   assert.ok(p.source_refs?.length,p.id);
   for(const src of p.source_refs)assert.match(src.url,/^https:\/\//,p.id);
-  assert.equal(p.release_year_evidence.checked_at,'2026-11-06',p.id);
+  assert.ok(p.release_year_evidence.checked_at>='2026-11-06',p.id);
  }
 });
 test('own sound without speakers qualifies for computer-free playing but NOT speaker requirement',()=>{

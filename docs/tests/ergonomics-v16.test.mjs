@@ -9,7 +9,7 @@ const date=new Date('2026-11-07T12:00:00');
 const check=(id,pref)=>classify(by(id),{...defaults,...pref},date);
 test('data enriched for exactly 14 products without adding fake prices',()=>{
  assert.equal(all.length,124);
- assert.equal(dataset.schema_version,'0.7.0');
+ assert.equal(dataset.schema_version,'0.8.0');
  const enriched=all.filter(p=>p.physical_spec_evidence);
  assert.equal(enriched.length,14);
  for(const p of enriched){

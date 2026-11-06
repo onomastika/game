@@ -10,7 +10,7 @@ export const num = n => new Intl.NumberFormat('ru-RU').format(n);
 export const standalone = p => p.onboard_sounds === true && p.speakers === true;
 export const soundPath = p => p.onboard_sounds === true ? (p.speakers === true ? 'Встроенные звуки и динамики' : p.speakers === false ? 'Свои звуки, нужны наушники/колонки' : 'Свои звуки, динамики не подтверждены') : p.onboard_sounds === false ? 'MIDI: нужен внешний звуковой инструмент' : 'Источник звука требуется проверить';
 export const name = p => `${p.brand} ${p.model}`;
-export const actionName = p => ({synth:'Синтезаторная',semi_weighted:'Полувзвешенная',weighted:'Взвешенная',piano:'Пианинная',hybrid_synth_piano:'Гибридная (synth/piano)',organ_waterfall:'Органная (waterfall)'})[p.action] ?? 'Тип не подтверждён';
+export const actionName = p => ({synth:'Синтезаторная',semi_weighted:'Полувзвешенная',weighted:'Взвешенная',piano:'Пианинная',box_light:'Лёгкая Box Type (не молоточковая)',graded_soft_touch:'Graded Soft Touch (не молоточковая)',hybrid_synth_piano:'Гибридная (synth/piano)',organ_waterfall:'Органная (waterfall)'})[p.action] ?? 'Тип не подтверждён';
 export const aftertouchName = p => ({polyphonic:'Полифонический (клавиши)',channel:'Канальный (клавиши)',present:'Есть, тип уточнить',none:'Нет (проверено)'})[p.key_aftertouch] ?? 'Не подтверждён';
 export const powerName = p => {
   const names={usb_bus:'USB-питание',ac_adapter:'Сетевой адаптер',aa_battery:'Батарейки AA'};

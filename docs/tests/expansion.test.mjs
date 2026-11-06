@@ -8,7 +8,7 @@ const byId=id=>products.find(p=>p.id===id);
 const date = new Date('2026-11-06T12:00:00');
 test('29 original v1.3 manufacturer-spec entries remain without invented prices',()=>{
  assert.ok(data.products.length>=124);
- assert.equal(data.schema_version,'0.7.0');
+ assert.equal(data.schema_version,'0.8.0');
  const added=products.filter(p=>p.data_quality==='manufacturer_specs_no_local_stock');
  assert.equal(added.length,29);
  for(const p of added){

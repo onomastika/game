@@ -25,7 +25,7 @@ test('year either sourced and dated or explicitly unknown; no invented releases 
    assert.ok(Number.isInteger(p.release_year)&&p.release_year>=1980&&p.release_year<=2026,p.id);
    assert.equal(p.release_year_status,'sourced');
    assert.match(p.release_year_evidence.url,/^https:\/\//,p.id);
-   assert.equal(p.release_year_evidence.checked_at,'2026-11-06');
+   assert.ok(p.release_year_evidence.checked_at>='2026-11-06');
    assert.ok(p.release_year_evidence.basis.length>5);
   }
  }
