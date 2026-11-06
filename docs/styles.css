@@ -317,3 +317,11 @@ footer span:last-child { max-width: 440px; text-align: right; }
 .catalog-facets { flex-wrap:wrap; }
 .catalog-facets select { max-width: 100%; min-width:0; }
 @media(max-width: 600px) { .catalog-facets { display:flex; gap:8px; } .catalog-facets select { flex:1 1 calc(50% - 8px); } .catalog-facets .catalog-visible-count { flex-basis:100%; } }
+
+/* v1.6: extra factual detail, deliberately quiet; no extra hero panels. */
+.rec-ergonomics { margin: 0 0 11px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.spec-citation { display: flex; gap: 8px 16px; align-items: center; flex-wrap: wrap; padding: 4px 0 10px; font-size: 11px; color: var(--muted); }
+.spec-citation a { color: var(--accent); text-underline-offset: 3px; }
+.unverified-note { color: var(--muted); }
+.advanced-content input[type=number] { max-width: 100%; }
+@media (max-width: 560px) { .spec-citation { display:block; } .spec-citation > * { display:block; margin-bottom:6px; } }

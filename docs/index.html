@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#151719">
-  <meta name="description" content="Найди клавиши для первого музыкального часа: подбирай по ощущениям и условиям, сравнивай компромиссы и проверяй факты перед покупкой.">
+  <meta name="description" content="Подбор клавиш по игре, размеру, механике, весу, питанию и подключению. Проверяемые данные производителя и честные неизвестные параметры.">
   <title>Клавиши. — найти свои и начать играть</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
@@ -25,7 +25,7 @@
         <div class="hero-label"><span class="signal" aria-hidden="true"></span> МЕНЬШЕ ВЫБОРА — БОЛЬШЕ МУЗЫКИ</div>
         <h1 id="heroTitle">Клавиши, на которых <em>начнёшь играть.</em></h1>
         <p>Выбери способ игры. Посмотри 2–3 осмысленных варианта. Проверь их на месте — и возвращайся к музыке, а не к обзорам.</p>
-        <div class="hero-meta"><span>Разные сценарии, не рейтинг брендов</span><span class="separator-dot" aria-hidden="true"></span><span>Без платных мест в подборе</span><span class="separator-dot" aria-hidden="true"></span><span id="catalogCount">80 моделей в базе</span></div>
+        <div class="hero-meta"><span>Разные сценарии, не рейтинг брендов</span><span class="separator-dot" aria-hidden="true"></span><span>Без платных мест в подборе</span><span class="separator-dot" aria-hidden="true"></span><span id="catalogCount">124 модели в базе</span></div>
       </section>
 
       <div class="workspace">
@@ -70,6 +70,13 @@
                   <legend for="maxWidth">Максимальная ширина, см</legend>
                   <input id="maxWidth" type="number" min="30" max="250" placeholder="Например, 90" inputmode="numeric">
                 </fieldset>
+                <fieldset>
+                  <legend for="maxWeight">Максимальный вес, кг</legend>
+                  <input id="maxWeight" type="number" min="1" max="40" step="0.5" placeholder="Например, 5" inputmode="decimal">
+                </fieldset>
+                <label class="small-check"><input id="usbAudioRequired" type="checkbox"><span>Нужен интерфейс USB audio<small>Не путай с USB MIDI. Направление аудио и возможность записать собственный звук проверяй отдельно.</small></span></label>
+                <label class="small-check"><input id="batteryRequired" type="checkbox"><span>Работа от батареек AA обязательна<small>USB-питание и батарейки — разные способы.</small></span></label>
+                <label class="small-check"><input id="keyAftertouchRequired" type="checkbox"><span>Aftertouch именно клавиш обязателен<small>Давление после нажатия; aftertouch пэдов не считается.</small></span></label>
                 <label class="small-check"><input id="speakerRequired" type="checkbox"><span>Встроенные динамики обязательны<small>Синтезаторы со своими звуками могут требовать наушники или колонки</small></span></label>
                 <label class="small-check"><input id="used" type="checkbox"><span>Показать архивные модели и б/у</span></label>
               </div>
@@ -88,7 +95,9 @@
               <p><strong>MIDI</strong><span>Передаёт нажатия, а не звук. MIDI-контроллеру нужен инструмент в программе или внешнем устройстве.</span></p>
               <p><strong>Встроенный звук</strong><span>Синтезатор сам создаёт звук. Динамики позволяют играть вообще без компьютера.</span></p>
               <p><strong>USB audio</strong><span>Позволяет передавать аудиосигнал по USB у поддерживаемых моделей; не то же самое, что USB MIDI.</span></p>
-              <p><strong>Чувствительность</strong><span>Реакция на силу удара. Ощущение клавиш и диапазон динамики лучше проверить руками.</span></p>
+              <p><strong>Чувствительность</strong><span>Громкость или тембр зависят от скорости нажатия; это не то же самое, что aftertouch.</span></p>
+              <p><strong>Aftertouch клавиш</strong><span>Дополнительное давление уже удерживаемой клавиши. Aftertouch драм-пэдов не означает aftertouch клавиатуры.</span></p>
+              <p><strong>Механика</strong><span>Пианинная, полувзвешенная и синтезаторная — ориентиры, а не рейтинг качества. Удобство определяется личной пробой.</span></p>
             </div></details>
           </section>
 
@@ -121,7 +130,7 @@
         <li>Договорись с собой: в первый день 15 минут игры, без нового сравнения.</li></ul></details>
       </section>
     </main>
-    <footer><span>клавиши. <span class="footer-muted">Независимый помощник в выборе</span></span><span>Данные от 06.11.2026 · цены — ориентиры, наличие и ощущения — проверять отдельно.</span></footer>
+    <footer><span>клавиши. <span class="footer-muted">Независимый помощник в выборе</span></span><span>Базовый каталог · 06.11.2026; уточнённые параметры 14 моделей · 07.11.2026. Цены и наличие — отдельно.</span></footer>
   </div>
   <div class="compare-dock" id="compareDock" hidden><span id="compareDockText">В сравнении: 0</span><button type="button" id="jumpDuel">Открыть сравнение</button></div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

@@ -1,8 +1,8 @@
 {
-  "schema_version": "0.6.0",
+  "schema_version": "0.7.0",
   "currency": "VND",
   "market": "Vietnam",
-  "snapshot_at": "2026-11-06",
+  "snapshot_at": "2026-11-07",
   "disclaimer": "Manufacturer-backed research snapshot as of 2026-11-06, not real-time Vietnamese inventory. Unknown fields are null; zero unverified local prices invented.",
   "products": [
     {
@@ -61,7 +61,11 @@
         "basis": "dated_product_launch_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "alesis-v49-mkii",
@@ -119,7 +123,11 @@
         "basis": "manufacturer_press_release_reprint",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "alesis-v61-mkii",
@@ -179,7 +187,11 @@
         "basis": "manufacturer_press_release_reprint",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "arturia-astrolab-61",
@@ -196,10 +208,10 @@
       "usb_midi": true,
       "usb_audio": null,
       "bluetooth_midi": null,
-      "width_mm": null,
-      "depth_mm": null,
-      "height_mm": null,
-      "weight_kg": null,
+      "width_mm": 935,
+      "depth_mm": 330,
+      "height_mm": 99,
+      "weight_kg": 9.9,
       "prices": [],
       "source_refs": [
         {
@@ -207,6 +219,12 @@
           "url": "https://www.arturia.com/company/press/press-releases",
           "source_type": "manufacturer",
           "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "Габариты, механика/питание/разъёмы: официальная спецификация, проверка версии 1.6",
+          "url": "https://www.arturia.com/products/hardware-synths/astrolab/astrolab-61",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-07"
         }
       ],
       "notes": "Добавлена при расширении базы. Актуальная цена и наличие не проверены.",
@@ -218,10 +236,12 @@
         "two_handed_play",
         "desk_fit"
       ],
-      "midi_din": null,
+      "midi_din": true,
       "headphones_out": null,
       "line_out": null,
-      "power_modes": [],
+      "power_modes": [
+        "ac_adapter"
+      ],
       "notes_on_uncertainty": [],
       "data_quality": "spec_release_source_no_local_stock",
       "editorial": {
@@ -237,7 +257,25 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": "present",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.arturia.com/products/hardware-synths/astrolab/astrolab-61",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "key_aftertouch",
+          "power_modes",
+          "power_modes_verified",
+          "midi_din"
+        ]
+      },
+      "pad_aftertouch": null
     },
     {
       "id": "arturia-astrolab-88",
@@ -296,7 +334,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "arturia-keylab61-mk3",
@@ -356,7 +398,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "arturia-keylab-61-mkii",
@@ -415,7 +461,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "arturia-keylab-88-mk3",
@@ -474,7 +524,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "arturia-keylabessential49-mk3",
@@ -534,7 +588,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "arturia-keylabessential61-mk3",
@@ -562,6 +620,12 @@
           "url": "https://www.arturia.com/store/midi-controllers-sequencers/keyboards-midi-controllers/keylab-essential-61-mk3",
           "source_type": "manufacturer",
           "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "Габариты, механика/питание/разъёмы: официальная спецификация, проверка версии 1.6",
+          "url": "https://www.arturia.com/store/keylab-essential-61-mk3",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-07"
         }
       ],
       "notes": "Больше контроллеров и ПО, но может быть избыточен для цели «быстро играть». Локальные цена и наличие этого поколения не установлены.",
@@ -573,10 +637,12 @@
         "two_handed_play",
         "desk_fit"
       ],
-      "midi_din": null,
+      "midi_din": true,
       "headphones_out": null,
       "line_out": null,
-      "power_modes": [],
+      "power_modes": [
+        "usb_bus"
+      ],
       "notes_on_uncertainty": [
         "Arturia exact product store says 890 mm, while generic overview includes 790 mm (likely reused other variant). Display 890 with conflict warning and confirm physical dimensions before purchase."
       ],
@@ -594,7 +660,25 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.arturia.com/store/keylab-essential-61-mk3",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "action",
+          "power_modes",
+          "power_modes_verified",
+          "midi_din"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "arturia-keylab-essential-61-mkii",
@@ -652,7 +736,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "arturia-keylab-essential-88-mk3",
@@ -710,7 +798,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-cts1",
@@ -744,6 +836,12 @@
           "url": "https://nhaccutienmanh.vn/dan-organ-casiotone-ct-s1/",
           "source_type": "retailer",
           "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "Габариты, механика/питание/разъёмы: официальная спецификация, проверка версии 1.6",
+          "url": "https://www.casio.com/us/electronic-musical-instruments/brands/casiotone/cts1/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-07"
         }
       ],
       "notes": "Очень простой для спонтанной автономной игры, звуки и динамики в корпусе. Не mini; Bluetooth нужен через отдельный адаптер.",
@@ -756,7 +854,7 @@
         "desk_fit"
       ],
       "midi_din": null,
-      "headphones_out": null,
+      "headphones_out": true,
       "line_out": null,
       "power_modes": [
         "ac_adapter",
@@ -787,7 +885,24 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.casio.com/us/electronic-musical-instruments/brands/casiotone/cts1/",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified",
+          "headphones_out"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "casio-cts1-76",
@@ -848,7 +963,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-ct-s100",
@@ -906,7 +1025,11 @@
         "basis": "historical_publication",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-cts1000v",
@@ -967,7 +1090,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-cts200",
@@ -1034,7 +1161,11 @@
         "basis": "historical_publication",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-cts300",
@@ -1111,7 +1242,11 @@
         "basis": "historical_publication",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-cts400",
@@ -1172,7 +1307,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-cts500",
@@ -1233,7 +1372,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-ctx3000",
@@ -1294,7 +1437,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-ct-x5000",
@@ -1352,7 +1499,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-ctx700",
@@ -1413,7 +1564,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-lk-s250",
@@ -1471,7 +1626,11 @@
         "basis": "historical_publication",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "casio-lk-s450",
@@ -1529,7 +1688,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-ek50",
@@ -1590,7 +1753,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-i3",
@@ -1653,7 +1820,11 @@
         "basis": "manufacturer_distributor_model_identity_2020",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-keystage61",
@@ -1692,7 +1863,7 @@
         "two_handed_play",
         "desk_fit"
       ],
-      "midi_din": null,
+      "midi_din": true,
       "headphones_out": true,
       "line_out": true,
       "power_modes": [
@@ -1714,7 +1885,28 @@
         "basis": "dated_press_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": "polyphonic",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.korg.com/download/global/html_manual/keystage/us/Topics/6-1_specification.htm",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "key_aftertouch",
+          "power_modes",
+          "power_modes_verified",
+          "midi_din",
+          "headphones_out",
+          "line_out",
+          "usb_audio"
+        ]
+      },
+      "pad_aftertouch": null
     },
     {
       "id": "korg-krome-ex-61",
@@ -1772,7 +1964,11 @@
         "basis": "dated_retailer_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-krome-ex-73",
@@ -1830,7 +2026,11 @@
         "basis": "dated_retailer_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-kross2-61",
@@ -1858,6 +2058,12 @@
           "url": "https://www.korg.com/tw/products/synthesizers/kross2/specifications.php",
           "source_type": "manufacturer",
           "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "Габариты, механика/питание/разъёмы: официальная спецификация, проверка версии 1.6",
+          "url": "https://www.korg.com/hken/products/synthesizers/kross2/specifications.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-07"
         }
       ],
       "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
@@ -1869,7 +2075,7 @@
         "two_handed_play",
         "desk_fit"
       ],
-      "midi_din": null,
+      "midi_din": true,
       "headphones_out": true,
       "line_out": true,
       "power_modes": [
@@ -1891,7 +2097,25 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.korg.com/hken/products/synthesizers/kross2/specifications.php",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified",
+          "midi_din",
+          "usb_audio"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "korg-microarranger",
@@ -1957,7 +2181,11 @@
         "basis": "manufacturer_product_history",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-microkeyair-61",
@@ -2023,7 +2251,11 @@
         "basis": "manufacturer_product_history",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-microkey2-61",
@@ -2089,7 +2321,7 @@
       "headphones_out": null,
       "line_out": null,
       "power_modes": [
-        "usb_bus_power"
+        "usb_bus"
       ],
       "notes_on_uncertainty": [],
       "data_quality": "research_seed",
@@ -2105,7 +2337,23 @@
         "basis": "manufacturer_product_history",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.korg.com/uk/products/computergear/microkey2/page_1.php",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "korg-microstation",
@@ -2122,10 +2370,10 @@
       "usb_midi": true,
       "usb_audio": null,
       "bluetooth_midi": null,
-      "width_mm": null,
-      "depth_mm": null,
-      "height_mm": null,
-      "weight_kg": null,
+      "width_mm": 778,
+      "depth_mm": 210,
+      "height_mm": 82,
+      "weight_kg": 2.6,
       "prices": [],
       "source_refs": [
         {
@@ -2133,6 +2381,12 @@
           "url": "https://cdn.korg.com/us/support/download/files/ee6923d06470b6d94bc08188b0c10744.pdf",
           "source_type": "manufacturer",
           "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "Габариты, механика/питание/разъёмы: официальная спецификация, проверка версии 1.6",
+          "url": "https://www.korg.com/caen/products/synthesizers/microstation/page_3.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-07"
         }
       ],
       "notes": "Характеристики и год — из внешних источников; локальные предложения не проверены.",
@@ -2147,7 +2401,9 @@
       "midi_din": null,
       "headphones_out": null,
       "line_out": null,
-      "power_modes": [],
+      "power_modes": [
+        "ac_adapter"
+      ],
       "notes_on_uncertainty": [],
       "data_quality": "verified_new_batch_specs_no_local_stock",
       "editorial": {
@@ -2163,7 +2419,24 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": "none",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.korg.com/caen/products/synthesizers/microstation/page_3.php",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "key_aftertouch",
+          "power_modes",
+          "power_modes_verified"
+        ]
+      },
+      "pad_aftertouch": null
     },
     {
       "id": "korg-nautilus-61",
@@ -2221,7 +2494,11 @@
         "basis": "2020_announcement_2021_shipment",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-nautilus-73",
@@ -2279,7 +2556,11 @@
         "basis": "2020_announcement_2021_shipment",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-nautilus-88",
@@ -2337,7 +2618,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-nautilus-at-61",
@@ -2402,7 +2687,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": "channel"
+      "aftertouch": "channel",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-opsix-se",
@@ -2461,7 +2750,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-pa1000",
@@ -2520,7 +2813,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-pa300",
@@ -2578,7 +2875,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-pa5x-61",
@@ -2637,7 +2938,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-pa5x-76",
@@ -2696,7 +3001,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-pa5x-88",
@@ -2755,7 +3064,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-pa600",
@@ -2819,7 +3132,11 @@
         "basis": "dated_2012_new_product_announcement_and_dec_2012_retail_listing",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "korg-pa700",
@@ -2877,7 +3194,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "m-audio-keystation61-mk3",
@@ -2933,10 +3254,13 @@
         "two_handed_play",
         "desk_fit"
       ],
-      "midi_din": null,
+      "midi_din": true,
       "headphones_out": null,
       "line_out": null,
-      "power_modes": [],
+      "power_modes": [
+        "usb_bus",
+        "ac_adapter"
+      ],
       "notes_on_uncertainty": [],
       "data_quality": "research_seed",
       "editorial": {
@@ -2951,7 +3275,25 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.m-audio.com/keyboard-controllers/keystation-61-mk3.html",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "action",
+          "power_modes",
+          "power_modes_verified",
+          "midi_din"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "maudio-oxygen61-mkv",
@@ -3011,7 +3353,11 @@
         "basis": "dated_press_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "maudio-oxygenpro61",
@@ -3071,7 +3417,11 @@
         "basis": "dated_press_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "native-instruments-komplete-kontrol-a61",
@@ -3129,7 +3479,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "native-instruments-komplete-kontrol-s61-mk2",
@@ -3188,7 +3542,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "native-instruments-kontrol-s49-mk3",
@@ -3246,7 +3604,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "native-instruments-kontrol-s61-mk3",
@@ -3304,7 +3666,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "nektar-impactgx49",
@@ -3364,7 +3730,11 @@
         "basis": "dated_press_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "nektar-impactgx61",
@@ -3381,9 +3751,9 @@
       "usb_midi": true,
       "usb_audio": false,
       "bluetooth_midi": null,
-      "width_mm": 965,
-      "depth_mm": 197,
-      "height_mm": 70,
+      "width_mm": 965.2,
+      "depth_mm": 196.9,
+      "height_mm": 69.9,
       "weight_kg": 2.72,
       "prices": [],
       "source_refs": [
@@ -3424,7 +3794,23 @@
         "basis": "dated_press_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://nektartech.com/products/impact-gx49-61/",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "nektar-impact-lx49",
@@ -3482,7 +3868,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "nektar-impact-lx61",
@@ -3540,7 +3930,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "nektar-se61",
@@ -3614,7 +4008,11 @@
         "basis": "dated_press_report",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "novation-flkey-2-49",
@@ -3672,7 +4070,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "novation-flkey-2-61",
@@ -3730,7 +4132,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "novation-flkey-61",
@@ -3788,7 +4194,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "novation-launchkey-49-mk3",
@@ -3846,7 +4256,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "novation-launchkey49-mk4",
@@ -3906,7 +4320,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "novation-launchkey-61-mk3",
@@ -3964,7 +4382,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "novation-launchkey61-mk4",
@@ -3974,7 +4396,7 @@
       "market_status": "current",
       "keys": 61,
       "key_size": "standard",
-      "action": "synth",
+      "action": "semi_weighted",
       "velocity": true,
       "onboard_sounds": false,
       "speakers": false,
@@ -4024,7 +4446,26 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "pad_aftertouch": "polyphonic",
+      "physical_spec_evidence": {
+        "url": "https://novationmusic.com/products/launchkey-61",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "action",
+          "power_modes",
+          "power_modes_verified",
+          "midi_din",
+          "pad_aftertouch"
+        ]
+      },
+      "key_aftertouch": null
     },
     {
       "id": "novation-launchkey-88-mk3",
@@ -4082,7 +4523,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-e-a7",
@@ -4140,7 +4585,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-e-x50",
@@ -4204,7 +4653,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-6",
@@ -4262,7 +4715,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-6-ex",
@@ -4320,7 +4777,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-7",
@@ -4378,7 +4839,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-7-ex",
@@ -4436,7 +4901,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-8",
@@ -4494,7 +4963,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-8-ex",
@@ -4552,7 +5025,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-06",
@@ -4610,7 +5087,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-07",
@@ -4668,7 +5149,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-fantom-08",
@@ -4726,7 +5211,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-go-keys-go-61k",
@@ -4784,7 +5273,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-gokeys3",
@@ -4857,7 +5350,7 @@
         "desk_fit"
       ],
       "midi_din": null,
-      "headphones_out": null,
+      "headphones_out": true,
       "line_out": null,
       "power_modes": [
         "ac_adapter",
@@ -4877,7 +5370,25 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.roland.com/global/products/gokeys_3/specifications/",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified",
+          "headphones_out",
+          "usb_audio"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "roland-gokeys5",
@@ -4938,7 +5449,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-go-piano-go-61p",
@@ -4996,7 +5511,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-go-piano88--go-88p",
@@ -5054,7 +5573,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-go-piano88-go-88px",
@@ -5112,7 +5635,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-junod6",
@@ -5140,6 +5667,12 @@
           "url": "https://www.roland.com/global/products/juno-d6/",
           "source_type": "manufacturer",
           "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "Габариты, механика/питание/разъёмы: официальная спецификация, проверка версии 1.6",
+          "url": "https://www.roland.com/US/products/juno-d6/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-07"
         }
       ],
       "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
@@ -5151,7 +5684,7 @@
         "two_handed_play",
         "desk_fit"
       ],
-      "midi_din": null,
+      "midi_din": true,
       "headphones_out": true,
       "line_out": true,
       "power_modes": [
@@ -5175,7 +5708,27 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://www.roland.com/US/products/juno-d6/",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified",
+          "headphones_out",
+          "line_out",
+          "midi_din",
+          "usb_audio"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "roland-juno-d7",
@@ -5233,7 +5786,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-juno-d8",
@@ -5291,7 +5848,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-juno-ds61",
@@ -5349,7 +5910,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-juno-ds88",
@@ -5407,7 +5972,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-juno-x",
@@ -5472,7 +6041,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": "channel"
+      "aftertouch": "channel",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-jupiter-x",
@@ -5531,7 +6104,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": true
+      "aftertouch": true,
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "roland-rd-08",
@@ -5589,7 +6166,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-ck61",
@@ -5629,7 +6210,7 @@
         "desk_fit"
       ],
       "midi_din": null,
-      "headphones_out": null,
+      "headphones_out": true,
       "line_out": null,
       "power_modes": [
         "ac_adapter",
@@ -5650,7 +6231,25 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/products/stagekeyboards/ck/specs.html",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified",
+          "headphones_out",
+          "usb_audio"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "yamaha-ck88",
@@ -5708,7 +6307,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-ez310",
@@ -5769,7 +6372,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-genos2",
@@ -5827,7 +6434,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-modx-m6",
@@ -5885,7 +6496,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-modx-m7",
@@ -5943,7 +6558,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-modx6",
@@ -6007,7 +6626,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-modx7",
@@ -6071,7 +6694,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-modx8-plus",
@@ -6129,7 +6756,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-montage-m6",
@@ -6194,7 +6825,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": "channel"
+      "aftertouch": "channel",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-montage-m7",
@@ -6259,7 +6894,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": "channel"
+      "aftertouch": "channel",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-montage-m8x",
@@ -6324,7 +6963,11 @@
         "checked_at": "2026-11-06"
       },
       "release_year_status": "sourced",
-      "aftertouch": "polyphonic"
+      "aftertouch": "polyphonic",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-np-12",
@@ -6382,7 +7025,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-np15",
@@ -6443,7 +7090,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-np-32",
@@ -6501,7 +7152,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-np35",
@@ -6562,7 +7217,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-p-145",
@@ -6620,7 +7279,11 @@
         "basis": "manufacturer_product_release",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-e283",
@@ -6678,7 +7341,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-e373",
@@ -6736,7 +7403,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psre383",
@@ -6809,7 +7480,7 @@
         "desk_fit"
       ],
       "midi_din": null,
-      "headphones_out": null,
+      "headphones_out": true,
       "line_out": null,
       "power_modes": [
         "ac_adapter",
@@ -6829,7 +7500,25 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "power_modes_verified": true,
+      "physical_spec_evidence": {
+        "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/products/portable-keyboards/psr-e383/specs.html",
+        "publisher": "manufacturer",
+        "checked_at": "2026-11-07",
+        "fields": [
+          "width_mm",
+          "depth_mm",
+          "height_mm",
+          "weight_kg",
+          "power_modes",
+          "power_modes_verified",
+          "headphones_out",
+          "usb_audio"
+        ]
+      },
+      "key_aftertouch": null,
+      "pad_aftertouch": null
     },
     {
       "id": "yamaha-psre473",
@@ -6890,7 +7579,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-e483",
@@ -6948,7 +7641,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-e583",
@@ -7006,7 +7703,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-ew310",
@@ -7064,7 +7765,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psrew320",
@@ -7125,7 +7830,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psrew425",
@@ -7186,7 +7895,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psrsx600",
@@ -7246,7 +7959,11 @@
         "basis": "manufacturer_chronology",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-sx700",
@@ -7304,7 +8021,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-sx720",
@@ -7362,7 +8083,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-sx900",
@@ -7420,7 +8145,11 @@
         "basis": "dated_product_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-psr-sx920",
@@ -7478,7 +8207,11 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     },
     {
       "id": "yamaha-yc61",
@@ -7536,10 +8269,14 @@
         "basis": "manufacturer_announcement",
         "checked_at": "2026-11-06"
       },
-      "release_year_status": "sourced"
+      "release_year_status": "sourced",
+      "key_aftertouch": null,
+      "pad_aftertouch": null,
+      "power_modes_verified": false,
+      "physical_spec_evidence": null
     }
   ],
-  "description": "Каталог 124 моделей (+44 проверенные без дублей), годы выхода с источниками или с явной неизвестностью; наличие и цены во Вьетнаме не гарантируются.",
+  "description": "124 модели, целевой аудит механики/подключения/размеров для 14 приоритетных инструментов: неизвестные параметры не скрываются и не считаются отрицательными.",
   "data_policy": {
     "hard_constraints_unknown": "review_needed_not_false",
     "price_snapshots_are_not_inventory": true,
@@ -7556,5 +8293,12 @@
     "sources_required": true,
     "year_is_not_market_availability": true,
     "verified_at": "2026-11-06"
+  },
+  "physical_specs_policy": {
+    "verified_enrichment_count": 14,
+    "verified_at": "2026-11-07",
+    "unknown_key_aftertouch": null,
+    "verified_power_modes_required_for_hard_battery_filter": true,
+    "note": "Aftertouch клавиш отделён от aftertouch драм-пэдов; старое поле aftertouch сохранено как историческое, не для фильтра. У остальных моделей поля, не подтверждённые источником, оставлены неизвестными."
   }
 }
