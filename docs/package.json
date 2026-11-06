@@ -1,1 +1,10 @@
-{"name":"keyboard-choice-lab","version":"1.0.0","private":true,"scripts":{"deploy":"npx wrangler deploy"}}
+{
+  "name": "keyboard-choice-lab",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "deploy": "npx wrangler deploy"
+  }
+}

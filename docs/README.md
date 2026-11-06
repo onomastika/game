@@ -1,29 +1,25 @@
-# Клавиши. — Keyboard Choice Lab
+# Keyboard Choice Lab — v1.1 (design refinement)
 
-Первая интерактивная версия сайта по выбору музыкальных клавиатур. Отдельная ветка `keyboard-choice-lab`, **не затрагивает `main`** основного репозитория.
+Dark, responsive, privacy-friendly keyboard chooser. No database, accounts, runtime dependencies or API keys.
 
-## Содержимое ветки
+## Files
 
-- `docs/index.html` — целиком автономный готовый сайт, CSS/JS/11 моделей встроены, внешних зависимостей нет.
-- `docs/wrangler.jsonc` — конфигурация публикации Cloudflare Workers Static Assets.
-- `package.json` — команды деплоя.
+- `index.html` — semantic UI
+- `styles.css` — visual language + responsive layouts
+- `engine.js` — pure matching, exclusions, freshness and tradeoffs
+- `app.js` — state, persistence, catalogue, comparisons and details
+- `catalog.json` — research snapshot (NOT live inventory)
+- `tests/engine.test.mjs` — matching logic tests
 
-## Локально
+## Local development
 
-```sh
-python3 -m http.server 8787 -d docs
-```
+Serve the directory over HTTP for ES modules: `python -m http.server 8000`; visit `http://localhost:8000/`.
+Run tests: `npm test`.
 
-## Cloudflare Workers
+## Cloudflare Workers (Git integration)
 
-В Cloudflare Workers & Pages → Create application → GitHub выбери репозиторий `onomastika/game`, ветку `keyboard-choice-lab` (если UI поддерживает выбор production branch), Root Directory `docs`. Build Command пустой, Deploy Command `npx wrangler deploy`. Worker Name: `keyboard-choice-lab` (совпадает с `wrangler.jsonc`). Assets Directory: `.`.
+Repository: `onomastika/game`; branch: `keyboard-choice-lab`; Root Directory: `docs`; Build command: leave empty; Deploy command: `npx wrangler deploy`.
 
-Cloudflare потребует разрешение на доступ к GitHub и проверку этой ветки. Никакие Cloudflare API-токены в GitHub добавлять не нужно при нативном подключении через Workers Builds.
+No Supabase or backend needed. The UI does not collect personal information. Preferences stay in localStorage and migrate from v1. Prices are historic leads and not live stock.
 
-## Важно
-
-Это исследовательский срез моделей/цен на 06.11.2026, не живой каталог остатков. Для MIDI-контроллеров нужен компьютер/внешний источник звука, встроенное звучание не подразумевается автоматически. Приложение сохраняет выбор локально в браузере, без серверной базы.
-
-## Полные исходники и тесты
-
-Архив `keyboard-choice-lab-site.zip` из беседы содержит модульную версию: `public/app.js`, `public/styles.css`, `public/engine.js`, `public/catalog.json`, тесты на Node.js и исходную конфигурацию. Отдельная ветка предназначена для простого деплоя без сборки.
+No commits to `main`.

@@ -1,0 +1,95 @@
+// Pure, deterministic selection logic. Unknown evidence never silently becomes a pass.
+export const defaults = Object.freeze({
+  intent: 'both', minKeys: 61, velocityRequired: true, mini: 'preferred',
+  standalone: 'preferred', budgetVnd: null, hardBudget: false,
+  maxWidthMm: null, includeUsed: false
+});
+export const money = n => n == null ? 'Цена не подтверждена' : `${new Intl.NumberFormat('ru-RU').format(n)} ₫`;
+export const num = n => new Intl.NumberFormat('ru-RU').format(n);
+export const standalone = p => p.onboard_sounds === true && p.speakers === true;
+export const name = p => `${p.brand} ${p.model}`;
+export const activeOffers = (p, asOf = new Date()) => {
+  const date = new Date(asOf); date.setHours(0, 0, 0, 0);
+  return (p.prices ?? []).filter(o => {
+    if (!o.amount_vnd || !o.checked_at || !o.url || !o.kind || o.kind === 'msrp' || o.model_variant_confirmed !== true) return false;
+    const age = Math.round((date - new Date(`${o.checked_at}T00:00:00`)) / 86400000);
+    return age >= 0 && age <= 7;
+  });
+};
+export const lowestKnownPrice = p => {
+  const offers = (p.prices ?? []).filter(x => x.amount_vnd > 0 && x.kind !== 'msrp');
+  return offers.length ? Math.min(...offers.map(x => x.amount_vnd)) : null;
+};
+export function classify(p, user, asOf = new Date()) {
+  const checks = [];
+  function check(label, status, detail) { checks.push({label, status, detail}); }
+  check('Клавиши', p.keys == null ? 'verify' : p.keys >= user.minKeys ? 'pass' : 'fail', `${p.keys ?? '—'} / минимум ${user.minKeys}`);
+  if (user.velocityRequired) check('Динамика', p.velocity === true ? 'pass' : p.velocity === false ? 'fail' : 'verify', p.velocity == null ? 'Нет точных данных' : p.velocity ? 'Есть' : 'Нет');
+  if (user.mini === 'required') check('Мини-клавиши', !p.key_size ? 'verify' : p.key_size === 'mini' ? 'pass' : 'fail', p.key_size === 'mini' ? 'Мини' : 'Не мини');
+  if (user.standalone === 'required') check('Без компьютера', p.onboard_sounds === false || p.speakers === false ? 'fail' : p.onboard_sounds == null || p.speakers == null ? 'verify' : 'pass', standalone(p) ? 'Свой звук и динамики' : 'Нужен источник звука');
+  if (user.maxWidthMm != null && user.maxWidthMm > 0) check('Ширина', p.width_mm == null ? 'verify' : p.width_mm <= user.maxWidthMm ? 'pass' : 'fail', `${p.width_mm ?? '?'} / ${user.maxWidthMm} мм`);
+  if (p.market_status === 'legacy' && !user.includeUsed) check('Новое устройство', 'fail', 'Архивная модель');
+  if (user.hardBudget && user.budgetVnd != null) {
+    const offers = activeOffers(p, asOf);
+    check('Строгий бюджет', offers.length === 0 ? 'verify' : offers.some(o => o.amount_vnd <= user.budgetVnd) ? 'pass' : 'fail', offers.length ? `Проверенные предложения: ${offers.map(o => money(o.amount_vnd)).join(', ')}` : 'Нет актуальной цены на конкретный вариант');
+  }
+  return {
+    status: checks.some(c => c.status === 'fail') ? 'excluded' : checks.some(c => c.status === 'verify') ? 'pending' : 'eligible',
+    checks, reasons: checks.filter(c => c.status === 'fail' || c.status === 'verify')
+  };
+}
+function routeScore(p, route, u) {
+  const isStandalone = standalone(p), isMini = p.key_size === 'mini';
+  const size = Number.isFinite(p.width_mm) ? p.width_mm : 1100;
+  const price = lowestKnownPrice(p) ?? 16000000;
+  let score = 0;
+  if (route === 'play') score += isStandalone ? 120 : -200;
+  if (route === 'studio') score += p.usb_midi === true ? 80 : -150;
+  if (route === 'compact') score += isMini ? 120 : 0;
+  if (u.intent === 'play_now' && isStandalone) score += 36;
+  if (u.intent === 'make_music' && p.usb_midi) score += 36;
+  if (u.mini === 'preferred' && isMini) score += 38;
+  if (u.standalone === 'preferred' && isStandalone) score += 23;
+  score -= size / 38;
+  score -= price / 900000;
+  // Stable tie-breaking always uses product ID.
+  return score;
+}
+export function recommend(products, u, date = new Date()) {
+  const all = products.map(p => ({...p, verdict: classify(p, u, date)}));
+  const eligible = all.filter(p => p.verdict.status === 'eligible');
+  const pending = all.filter(p => p.verdict.status === 'pending');
+  const excluded = all.filter(p => p.verdict.status === 'excluded');
+  const selected = [];
+  const routes = u.intent === 'play_now' ? ['play','compact','studio'] : u.intent === 'make_music' ? ['studio','compact','play'] : ['play','studio','compact'];
+  for (const route of routes) {
+    const pool = eligible.filter(p => !selected.some(s => s.id === p.id)).filter(p => route === 'play' ? standalone(p) : route === 'studio' ? p.usb_midi === true : p.key_size === 'mini');
+    const choice = pool.sort((a,b) => routeScore(b,route,u) - routeScore(a,route,u) || a.id.localeCompare(b.id))[0];
+    if (choice) selected.push({...choice, route});
+  }
+  return {selected, eligible, pending, excluded, all};
+}
+export function tradeoffs(p, u) {
+  const cons = [];
+  if (!standalone(p)) cons.push('Для звука понадобится компьютер, телефон или другой MIDI-хост и программа с инструментом.');
+  if (p.key_size === 'standard' && u.mini !== 'any') cons.push('Полноразмерные клавиши — важно проверить удобство для небольших рук.');
+  if (p.key_size === 'mini') cons.push('На мини-клавишах может быть непривычно играть двумя руками.');
+  if (p.width_mm == null) cons.push('Точные габариты нужно уточнить перед покупкой.');
+  if ((p.prices ?? []).length === 0) cons.push('Нет подтверждённой локальной цены на конкретный вариант.');
+  if (p.notes_on_uncertainty?.length) cons.push(...p.notes_on_uncertainty.slice(0,1));
+  return cons;
+}
+export function firstSound(p) {
+  if (standalone(p)) return [
+    'Поставь инструмент на стол и подключи питание (по инструкции к модели).',
+    'Включи динамики, выбери простой звук фортепиано.',
+    'Сыграй три ноты, затем тихо и громко — почувствуй динамику.',
+    'Попробуй четыре аккорда или короткую мелодию. Никакого компьютера.'
+  ];
+  return [
+    'Подключи клавиатуру USB-кабелем к компьютеру.',
+    'В Reaper открой виртуальный инструмент (VSTi); MIDI сам по себе не создаёт звук.',
+    'Создай MIDI-дорожку, выбери устройство на входе и включи monitoring.',
+    'Услышь первые три ноты; затем запиши 30 секунд игры.'
+  ];
+}

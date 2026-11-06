@@ -1,0 +1,700 @@
+{
+  "schema_version": "0.2.0",
+  "currency": "VND",
+  "market": "Vietnam",
+  "snapshot_at": "2026-11-06",
+  "disclaimer": "Research snapshot, not inventory or live price feed; specs verified per listed manufacturer source; null means unknown.",
+  "products": [
+    {
+      "id": "arturia-keylabessential61-mk3",
+      "brand": "Arturia",
+      "model": "KeyLab Essential 61 mk3",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "hybrid_synth_piano",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": false,
+      "width_mm": 890,
+      "depth_mm": 240,
+      "height_mm": 70,
+      "weight_kg": 3.08,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, MIDI outputs, 890 × 240 × 70mm; bundled software is NOT onboard sound",
+          "url": "https://www.arturia.com/store/midi-controllers-sequencers/keyboards-midi-controllers/keylab-essential-61-mk3",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Больше контроллеров и ПО, но может быть избыточен для цели «быстро играть». Локальные цена и наличие этого поколения не установлены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [
+        "Arturia exact product store says 890 mm, while generic overview includes 790 mm (likely reused other variant). Display 890 with conflict warning and confirm physical dimensions before purchase."
+      ],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "casio-cts1",
+      "brand": "Casio",
+      "model": "CT-S1",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": false,
+      "width_mm": 930,
+      "depth_mm": 258,
+      "height_mm": 83,
+      "weight_kg": 4.5,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 keys, 3-step touch response, onboard tones, speakers, USB host MIDI, dimensions",
+          "url": "https://www.casio.com/vn/electronic-musical-instruments/brands/casiotone/cts1/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "61/76 variant listing, minimum price shown; confirm SKU selected",
+          "url": "https://nhaccutienmanh.vn/dan-organ-casiotone-ct-s1/",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Очень простой для спонтанной автономной игры, звуки и динамики в корпусе. Не mini; Bluetooth нужен через отдельный адаптер.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [
+        "Variant-linked storefront price removed from comparable exact-SKU offers."
+      ],
+      "data_quality": "research_seed",
+      "price_leads": [
+        {
+          "kind": "starting_from_variant_group",
+          "amount_vnd": 5990000,
+          "url": "https://nhaccutienmanh.vn/dan-organ-casiotone-ct-s1/",
+          "note": "Страница продаёт 61 и 76 клавиш; цену 61-клавишной конфигурации следует подтвердить выбором варианта."
+        }
+      ]
+    },
+    {
+      "id": "casio-cts200",
+      "brand": "Casio",
+      "model": "CT-S200",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": false,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": false,
+      "width_mm": 930,
+      "depth_mm": 256,
+      "height_mm": 73,
+      "weight_kg": 3.3,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "Casio CT-S200 exact model official specs; no touch-response entry compared with CT-S300",
+          "url": "https://www.casio.com/us/electronic-musical-instruments/product.CT-S200BK/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "Casio CT-S300 comparison: has explicit touch response 2 levels, unlike CT-S200",
+          "url": "https://www.casio.com/us/electronic-musical-instruments/product.CT-S300/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Нарочно оставлен в датасете как отрицательный пример: не удовлетворяет обязательной динамике.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [
+        "NEGATIVE CONTROL — fails required velocity. Must be excluded by default.",
+        "Official CT-S200 specifications omit Touch Response, unlike Casio CT-S300; verify no-velocity via manufacturer comparison before changing this negative control."
+      ],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "casio-cts300",
+      "brand": "Casio",
+      "model": "CT-S300",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": false,
+      "width_mm": 930,
+      "depth_mm": 256,
+      "height_mm": 73,
+      "weight_kg": 3.3,
+      "prices": [
+        {
+          "amount_vnd": 4770000,
+          "store": "Nhạc Cụ Tiến Mạnh",
+          "url": "https://nhaccutienmanh.vn/dan-organ-casio-casiotone-ct-s300/",
+          "kind": "promotional",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        }
+      ],
+      "source_refs": [
+        {
+          "claim": "61 keys, 2-level touch response, speakers, dimensions, weight",
+          "url": "https://www.casio.com/vn/electronic-musical-instruments/product.CT-S300/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "local price",
+          "url": "https://nhaccutienmanh.vn/dan-organ-casio-casiotone-ct-s300/",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Более доступная автономная альтернатива CT-S1, больше пресетов, но количество пресетов НЕ является оценкой качества звука.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "korg-microarranger",
+      "brand": "Korg",
+      "model": "microARRANGER",
+      "type": "legacy_keyboard",
+      "market_status": "legacy",
+      "keys": 61,
+      "key_size": "mini",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": null,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity-sensitive mini keys, onboard sounds and stereo speakers",
+          "url": "https://www.korg.com/hken/products/synthesizers/microarranger/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "detailed 61 mini spec",
+          "url": "https://www.korg.com/sg/products/synthesizers/microarranger/page_3.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Редкий архивный вариант «61 mini + встроенный звук + динамика», но продажи и локальная поддержка не подтверждены. По умолчанию не рекомендовать как доступный новый товар.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": true,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [
+        "Legacy; USB MIDI and audio remain unknown; do not assume modern USB workflow."
+      ],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "korg-microkey2-61",
+      "brand": "Korg",
+      "model": "microKEY2 61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "mini",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": false,
+      "width_mm": 850,
+      "depth_mm": 139,
+      "height_mm": 54,
+      "weight_kg": 1.71,
+      "prices": [
+        {
+          "amount_vnd": 4290000,
+          "store": "NY Audio Store",
+          "url": "https://nyaudio.vn/korg-microkey-2-61/",
+          "kind": "listed",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        }
+      ],
+      "source_refs": [
+        {
+          "claim": "61 mini Natural Touch, USB, dimensions and weight",
+          "url": "https://www.korg.com/uk/products/computergear/microkey2/page_1.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "velocity-sensitive, 61-key model",
+          "url": "https://cdn.korg.com/us/support/download/files/ff0427bd83f4857e69f0a277dd751bd0.pdf",
+          "source_type": "manual",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "local listed price",
+          "url": "https://nyaudio.vn/korg-microkey-2-61/",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Короткий путь к MIDI в Reaper; мини-клавиши и очень малая глубина. Нужен компьютер/другой генератор звука; встроенного звука и динамиков нет.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus_power"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "korg-microkeyair-61",
+      "brand": "Korg",
+      "model": "microKEY Air 61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "mini",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": true,
+      "width_mm": 850,
+      "depth_mm": 139,
+      "height_mm": 54,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 mini, Bluetooth LE MIDI, USB, AA battery for wireless MIDI",
+          "url": "https://www.korg.com/ir/products/computergear/microkey2_air/page_1.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "velocity-sensitive keyboard",
+          "url": "https://cdn.korg.com/us/support/download/files/ff0427bd83f4857e69f0a277dd751bd0.pdf",
+          "source_type": "manual",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Bluetooth MIDI означает беспроводную передачу нот, НЕ встроенный звук. Местную цену и наличие Air-61 нужно уточнить перед публикацией.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus_power",
+        "batteries_for_wireless_midi"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "m-audio-keystation61-mk3",
+      "brand": "M-Audio",
+      "model": "Keystation 61 MK3",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "semi_weighted",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": false,
+      "width_mm": 995,
+      "depth_mm": 189,
+      "height_mm": 68,
+      "weight_kg": 4.1,
+      "prices": [
+        {
+          "amount_vnd": 4300000,
+          "store": "Melody Music",
+          "url": "https://melodymusic.vn/m-audio-keystation-61-mk3.html",
+          "kind": "listed",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        }
+      ],
+      "source_refs": [
+        {
+          "claim": "61 full-size semi-weighted velocity keys, USB MIDI, width, weight",
+          "url": "https://www.m-audio.com/keyboard-controllers/keystation-61-mk3.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "local price for exact MK3 SKU",
+          "url": "https://melodymusic.vn/m-audio-keystation-61-mk3.html",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Стандартные полувзвешенные клавиши, MIDI-only. Прямая карточка MK3 и цена найдены; наличие перепроверить в день покупки.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "nektar-se61",
+      "brand": "Nektar",
+      "model": "SE61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": false,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [
+        {
+          "amount_vnd": 2590000,
+          "store": "VinaSound",
+          "url": "https://vinasound.vn/san-pham/nektar-se61-usb-midi-keyboard-controller",
+          "kind": "listed",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        }
+      ],
+      "source_refs": [
+        {
+          "claim": "61 full-size velocity-sensitive USB controller, velocity curves",
+          "url": "https://nektartech.com/se49-se61-midi-controller-keyboard/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "local price",
+          "url": "https://vinasound.vn/san-pham/nektar-se61-usb-midi-keyboard-controller",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Самая доступная модель MIDI в этой стартовой выборке по найденному локальному предложению; клавиши стандартного размера.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "roland-gokeys3",
+      "brand": "Roland",
+      "model": "GO:KEYS 3",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": true,
+      "width_mm": 950,
+      "depth_mm": 286,
+      "height_mm": 87,
+      "weight_kg": 4.5,
+      "prices": [
+        {
+          "amount_vnd": 11000000,
+          "store": "Swee Lee Vietnam",
+          "url": "https://www.sweelee.com.vn/products/roland-go-keys-3-music-creation-keyboard-red",
+          "kind": "listed",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        },
+        {
+          "amount_vnd": 9890000,
+          "store": "Nhạc Cụ Tiến Mạnh",
+          "url": "https://nhaccutienmanh.vn/dan-organ-roland-gokeys-3-music-creation-keyboard/",
+          "kind": "listed",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        }
+      ],
+      "source_refs": [
+        {
+          "claim": "61 velocity, built-in tones/speakers, USB audio and MIDI, BLE MIDI, dimensions",
+          "url": "https://www.roland.com/global/products/gokeys_3/specifications/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "local price",
+          "url": "https://www.sweelee.com.vn/products/roland-go-keys-3-music-creation-keyboard-red",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "local price for model with selectable color",
+          "url": "https://nhaccutienmanh.vn/dan-organ-roland-gokeys-3-music-creation-keyboard/",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Клавишная рабочая станция для творческих экспериментов, но не минималистичная и заметно дороже бюджетных вариантов.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed"
+    },
+    {
+      "id": "yamaha-psre383",
+      "brand": "Yamaha",
+      "model": "PSR-E383",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": false,
+      "width_mm": 941,
+      "depth_mm": 317,
+      "height_mm": 105,
+      "weight_kg": 4.4,
+      "prices": [
+        {
+          "amount_vnd": 5790000,
+          "store": "Yamaha Vietnam",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/products/portable-keyboards/psr-e383/",
+          "kind": "msrp",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        },
+        {
+          "amount_vnd": 4973000,
+          "store": "Hảo Vĩnh",
+          "url": "https://haovinh.vn/psr-383/",
+          "kind": "promotional",
+          "checked_at": "2026-11-06",
+          "availability": "unverified",
+          "model_variant_confirmed": true,
+          "availability_checked": false
+        }
+      ],
+      "source_refs": [
+        {
+          "claim": "61 keys, touch response, USB audio/MIDI, speakers, dimensions",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/products/portable-keyboards/psr-e383/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "manufacturer suggested price",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/products/portable-keyboards/psr-e383/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "retailer listed discount, check promotions",
+          "url": "https://haovinh.vn/psr-383/",
+          "source_type": "retailer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Автономный звук и обширное сопровождение, но заметно более глубокий корпус и больше функций. Цена со скидкой может измениться.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed"
+    }
+  ],
+  "description": "V2 audited research seed. No live stock guarantees. Only exact-variant prices qualify for price comparisons.",
+  "data_policy": {
+    "hard_constraints_unknown": "review_needed_not_false",
+    "price_snapshots_are_not_inventory": true,
+    "currency": "VND",
+    "source_of_truth": "manufacturer_for_specs_retailer_for_offer",
+    "unknown_in_hard_budget": "verification_required",
+    "last_reviewed_local_date": "2026-11-06"
+  }
+}
