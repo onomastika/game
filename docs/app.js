@@ -1,10 +1,13 @@
-import {defaults, money, standalone, name, classify, recommend, tradeoffs, firstSound, priceEvidence, compareAdvice, purchaseChecklist} from './engine.js';
+import {defaults, money, standalone, soundPath, name, classify, recommend, tradeoffs, firstSound, priceEvidence, compareAdvice, purchaseChecklist} from './engine.js';
 const $ = sel => document.querySelector(sel);
 const esc = text => String(text ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let products = [];
 let preferences = {...defaults};
 let duel = [];
 let catalogFilter = 'eligible';
+let brandFilter = 'all';
+let typeFilter = 'all';
+let displayLimit = 12;
 let query = '';
 let detailId = null;
 let detailContext = null;
@@ -24,7 +27,7 @@ function tip(p,route){
  if(route==='studio')return 'Передаёт исполнение в Reaper. Для звучания нужен VSTi или другой генератор звука.';
  return 'Сохранены 61 клавиша в более узком профиле клавиш; удобство двух рук важно проверить.';
 }
-function pills(p){return `<div class="spec-pills"><span>${p.keys} клавиш</span><span>${p.key_size==='mini'?'Mini':'Полный размер'}</span><span>${p.velocity===true?'Динамика нажатия':p.velocity===false?'Без динамики':'Динамика — уточнить'}</span><span>${standalone(p)?'Есть встроенный звук':'Нужен источник звука'}</span></div>`}
+function pills(p){return `<div class="spec-pills"><span>${p.keys} клавиш</span><span>${p.key_size==='mini'?'Mini':'Полный размер'}</span><span>${p.velocity===true?'Динамика нажатия':p.velocity===false?'Без динамики':'Динамика — уточнить'}</span><span>${esc(soundPath(p))}</span></div>`}
 function priceText(p) {
  const offer=priceEvidence(p);
  return offer ? `${offer.fresh ? 'Ориентир' : 'Старая цена'}: ${money(offer.amount_vnd)} · ${offer.checked_at.slice(8,10)}.${offer.checked_at.slice(5,7)}` : 'Цена: нужно уточнить';
@@ -98,11 +101,13 @@ function renderRecommendations(result){
 }
 function productStatus(p){return p.verdict.status==='eligible'?'<span class="status-text">● Соответствует условиям</span>':p.verdict.status==='pending'?'<span class="status-text verify">◐ Проверить</span>':'<span class="status-text excluded">○ Не соответствует</span>'}
 function renderCatalog(result){
- const list=result.all.filter(p=>catalogFilter==='all'||p.verdict.status===catalogFilter).filter(p=>name(p).toLocaleLowerCase().includes(query.toLocaleLowerCase()));
- $('#catalog').innerHTML=list.length?list.map(p=>`<article class="product-row"><div><div class="product-title">${esc(name(p))}</div><div class="product-subtitle">${esc(typeText(p))} · ${p.keys} клавиш · ${p.key_size==='mini'?'mini':'полный размер'} · ${standalone(p)?'свои звуки и динамики':'нужен звуковой инструмент'}</div></div><div class="product-controls">${productStatus(p)}<span class="product-price">${esc(priceText(p))}</span><button type="button" class="add-btn ${duel.includes(p.id)?'active':''}" data-compare="${esc(p.id)}" aria-pressed="${duel.includes(p.id)}" aria-label="${duel.includes(p.id)?'Убрать из сравнения':'Добавить в сравнение'}: ${esc(name(p))}">${duel.includes(p.id)?'✓':'+'} Сравнить</button><button type="button" class="link-btn" data-detail="${esc(p.id)}" aria-expanded="${detailId===p.id&&detailContext==='catalog'}">Детали →</button></div></article>`).join(''):`<div class="empty"><strong>Ничего не найдено</strong>Измени запрос или фильтр каталога.</div>`;
+ const list=result.all.filter(p=>catalogFilter==='all'||p.verdict.status===catalogFilter).filter(p=>brandFilter==='all'||p.brand===brandFilter).filter(p=>typeFilter==='all'||p.type===typeFilter).filter(p=>name(p).toLocaleLowerCase().includes(query.toLocaleLowerCase()));
+ $('#catalogVisibleCount').textContent=`${Math.min(list.length,displayLimit)} из ${list.length} найденных · ${products.length} в базе`;
+ const visible = list.slice(0,displayLimit);
+ $('#catalog').innerHTML=list.length?visible.map(p=>`<article class="product-row"><div><div class="product-title">${esc(name(p))}</div><div class="product-subtitle">${esc(typeText(p))} · ${p.keys} клавиш · ${p.key_size==='mini'?'mini':'полный размер'} · ${esc(soundPath(p))}</div></div><div class="product-controls">${productStatus(p)}<span class="product-price">${esc(priceText(p))}</span><button type="button" class="add-btn ${duel.includes(p.id)?'active':''}" data-compare="${esc(p.id)}" aria-pressed="${duel.includes(p.id)}" aria-label="${duel.includes(p.id)?'Убрать из сравнения':'Добавить в сравнение'}: ${esc(name(p))}">${duel.includes(p.id)?'✓':'+'} Сравнить</button><button type="button" class="link-btn" data-detail="${esc(p.id)}" aria-expanded="${detailId===p.id&&detailContext==='catalog'}">Детали →</button></div></article>`).join('') + (list.length>displayLimit?`<div class="more-wrap"><button type="button" class="more-button" id="showMore">Показать ещё ${Math.min(12,list.length-displayLimit)} из ${list.length-displayLimit}</button></div>`:''):`<div class="empty"><strong>Ничего не найдено</strong>Измени запрос или фильтр каталога.</div>`;
  document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('selected',b.dataset.filter===catalogFilter);b.setAttribute('aria-pressed',String(b.dataset.filter===catalogFilter))});
 }
-const attributes=[['Тип',p=>typeText(p)],['Клавиши',p=>String(p.keys)],['Размер клавиш',p=>p.key_size==='mini'?'Мини':'Полный'],['Динамика',p=>p.velocity===true?'Есть':p.velocity===false?'Нет':'Проверить'],['Самостоятельный звук',p=>standalone(p)?'Да':'Нет'],['USB MIDI',p=>p.usb_midi===true?'Да':p.usb_midi===false?'Нет':'Проверить'],['Ширина',p=>p.width_mm!=null?`${p.width_mm/10} см`:'Проверить'],['Цена по старым публикациям',p=>priceEvidence(p)!=null?money(priceEvidence(p).amount_vnd):'Нет данных'],['Звук за 1 минуту',p=>standalone(p)?'Встроенные звуки':'VST + MIDI']];
+const attributes=[['Тип',p=>typeText(p)],['Клавиши',p=>String(p.keys)],['Размер клавиш',p=>p.key_size==='mini'?'Мини':'Полный'],['Динамика',p=>p.velocity===true?'Есть':p.velocity===false?'Нет':'Проверить'],['Собственный звуковой движок',p=>p.onboard_sounds===true?'Да':p.onboard_sounds===false?'Нет':'Проверить'],['Встроенные динамики',p=>p.speakers===true?'Да':p.speakers===false?'Нет':'Проверить'],['USB MIDI',p=>p.usb_midi===true?'Да':p.usb_midi===false?'Нет':'Проверить'],['Ширина',p=>p.width_mm!=null?`${p.width_mm/10} см`:'Проверить'],['Цена по старым публикациям',p=>priceEvidence(p)!=null?money(priceEvidence(p).amount_vnd):'Нет данных'],['Как услышать звук',p=>soundPath(p)]];
 function renderDuel(){
  const items=duel.map(id=>products.find(p=>p.id===id)).filter(Boolean);
  $('#compareCount').textContent=String(items.length);
@@ -125,25 +130,28 @@ function updatePref(key,value){
 document.addEventListener('click',e=>{
  const toggle=e.target.closest('[data-setting] [data-value]');if(toggle){const group=toggle.closest('[data-setting]');updatePref(group.dataset.setting,toggle.dataset.value);return}
  const conflict=e.target.closest('[data-change]');if(conflict){updatePref(conflict.dataset.change,conflict.dataset.value);toast('Условие изменено. Результаты пересчитаны.');return}
- const f=e.target.closest('[data-filter]');if(f){catalogFilter=f.dataset.filter;detailId=null;detailContext=null;render();return}
+ const f=e.target.closest('[data-filter]');if(f){catalogFilter=f.dataset.filter;displayLimit=12;detailId=null;detailContext=null;render();return}
  const c=e.target.closest('[data-compare]');if(c){const id=c.dataset.compare;if(duel.includes(id))duel=duel.filter(x=>x!==id);else if(duel.length===2){duel=[duel[1],id];toast('В дуэли заменён первый инструмент.')}else duel.push(id);render();return}
  const detail=e.target.closest('[data-detail]');if(detail){const context=detail.closest('#catalog')?'catalog':'recommendations';const shouldClose=detailId===detail.dataset.detail&&detailContext===context;detailId=shouldClose?null:detail.dataset.detail;detailContext=shouldClose?null:context;renderDetails();document.querySelectorAll('[data-detail]').forEach(b=>b.setAttribute('aria-expanded',String(b.dataset.detail===detailId&&Boolean(b.closest(`#${detailContext}`)))));if(detailId)requestAnimationFrame(()=>$('#activeDetail')?.scrollIntoView({behavior:'smooth',block:'nearest'}));return}
  if(e.target.closest('[data-close-detail]')){detailId=null;detailContext=null;renderDetails();document.querySelectorAll('[data-detail]').forEach(b=>b.setAttribute('aria-expanded','false'));return}
  const r=e.target.closest('[data-remove]');if(r){duel=duel.filter(id=>id!==r.dataset.remove);render();return}
+ if(e.target.closest('#showMore')){displayLimit+=12;renderCatalog(recommend(products,preferences));renderDetails();return}
  if(e.target.closest('#clearDuel')){duel=[];render();return}
- if(e.target.closest('#reset,#resetMobile')){preferences={...defaults};duel=[];query='';$('#search').value='';detailId=null;detailContext=null;catalogFilter='eligible';$('#advancedSettings').open=false;render();toast('Начальные условия восстановлены.');return}
+ if(e.target.closest('#reset,#resetMobile')){preferences={...defaults};duel=[];query='';brandFilter='all';typeFilter='all';$('#brandFilter').value='all';$('#typeFilter').value='all';$('#search').value='';detailId=null;detailContext=null;catalogFilter='eligible';displayLimit=12;$('#advancedSettings').open=false;render();toast('Начальные условия восстановлены.');return}
 });
 $('#velocity').addEventListener('change',e=>{preferences.velocityRequired=e.target.checked;render()});
 $('#hardBudget').addEventListener('change',e=>{preferences.hardBudget=e.target.checked;render()});
 $('#used').addEventListener('change',e=>{preferences.includeUsed=e.target.checked;render()});
 $('#maxWidth').addEventListener('change',e=>{const cm=Number(e.target.value);preferences.maxWidthMm=e.target.value&&Number.isFinite(cm)&&cm>0?Math.round(cm*10):null;render()});
-$('#search').addEventListener('input',e=>{query=e.target.value;detailId=null;detailContext=null;renderCatalog(recommend(products,preferences))});
+$('#search').addEventListener('input',e=>{query=e.target.value;displayLimit=12;detailId=null;detailContext=null;renderCatalog(recommend(products,preferences))});
+$('#brandFilter').addEventListener('change',e=>{brandFilter=e.target.value;displayLimit=12;detailId=null;detailContext=null;renderCatalog(recommend(products,preferences));renderDetails()});
+$('#typeFilter').addEventListener('change',e=>{typeFilter=e.target.value;displayLimit=12;detailId=null;detailContext=null;renderCatalog(recommend(products,preferences));renderDetails()});
 $('#jumpDuel').addEventListener('click',()=>$('#duel').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}));
 if(preferences.budgetVnd!=null||preferences.hardBudget||preferences.maxWidthMm!=null||preferences.includeUsed)$('#advancedSettings').open=true;
 async function init(){try{
  const res=await fetch('/catalog.json',{cache:'no-store'});if(!res.ok)throw new Error(`HTTP ${res.status}`);
  const body=await res.json();if(!Array.isArray(body.products))throw new Error('Некорректный каталог');
- products=body.products;duel=duel.filter(id=>products.some(p=>p.id===id));$('#catalogCount').textContent=`${products.length} моделей в базе`;render();
+ products=body.products;duel=duel.filter(id=>products.some(p=>p.id===id));$('#catalogCount').textContent=`${products.length} моделей в базе`;const brands=[...new Set(products.map(p=>p.brand))].sort((a,b)=>a.localeCompare(b,'ru'));$('#brandFilter').innerHTML='<option value="all">Все бренды</option>'+brands.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join('');render();
 }catch(error){console.error(error);$('#resultCount').textContent='Недоступно';$('#recommendations').innerHTML=`<div class="warning-panel"><strong>Не удалось загрузить каталог</strong><p>Проверь подключение и попробуй перезагрузить страницу.</p><button class="add-btn" id="retryCatalog">Перезагрузить</button></div>`;$('#catalog').innerHTML='';}}
 document.addEventListener('click',event=>{if(event.target.closest('#retryCatalog'))location.reload()});
 init();

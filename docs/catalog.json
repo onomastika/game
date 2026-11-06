@@ -1,10 +1,169 @@
 {
-  "schema_version": "0.3.0",
+  "schema_version": "0.4.0",
   "currency": "VND",
   "market": "Vietnam",
   "snapshot_at": "2026-11-06",
-  "disclaimer": "Research snapshot, not inventory or live price feed; specs verified per listed manufacturer source; null means unknown.",
+  "disclaimer": "Manufacturer-backed research snapshot as of 2026-11-06, not real-time Vietnamese inventory. Unknown fields are null; zero unverified local prices invented.",
   "products": [
+    {
+      "id": "alesis-v61-mkii",
+      "brand": "Alesis",
+      "model": "V61 MKII",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 full-size velocity sensitive synth-action keys, 8 pads, MIDI controls",
+          "url": "https://www.alesis.com/products/view2/v61-mkii",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для первых MIDI-партий, когда нужны основные ручки и пэды, но не хочется переплачивать за сложную интеграцию.",
+        "not_for": "Инструмент не создаёт звук сам, а сила нажатия и механика клавиш отличаются от пианино.",
+        "try_in_store": "Подключи VST-пианино, сыграй гамму в тихой динамике и несколько аккордов, затем проверь пэды.",
+        "question": "Нужны ли тебе пэды для ударных или хватило бы ещё более простого контроллера?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "arturia-keylab61-mk3",
+      "brand": "Arturia",
+      "model": "KeyLab 61 mk3",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys with aftertouch, deep DAW control, built-in sounds absent",
+          "url": "https://www.arturia.com/products/hybrid-synths/keylab-mk3/overview",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если работаешь с виртуальными инструментами и хочешь контролировать проекты и звуки с одной клавиатуры.",
+        "not_for": "Это дорогой и функционально сложный MIDI-контроллер, а не автономный синтезатор со встроенным звуком.",
+        "try_in_store": "Проверь клавиши в диапазоне тихо–громко, работу aftertouch и возможность настроить управление Reaper.",
+        "question": "Станут ли расширенные органы управления полезны тебе уже сейчас или хватит KeyLab Essential?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "arturia-keylabessential49-mk3",
+      "brand": "Arturia",
+      "model": "KeyLab Essential 49 mk3",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 49,
+      "key_size": "standard",
+      "action": "hybrid_synth_piano",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 790,
+      "depth_mm": 240,
+      "height_mm": 70,
+      "weight_kg": 2.76,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "49 velocity hybrid synth/piano keys, DAW controls, 790 x 240 x 70",
+          "url": "https://www.arturia.com/store/keyboards-midi-controllers/keylab-essential-49-mk3",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": true,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для творческой работы с виртуальными инструментами Arturia и достаточно компактного четырёхоктавного формата.",
+        "not_for": "Меньше места для двух рук и никаких встроенных звуков без компьютера, несмотря на комплект программных синтезаторов.",
+        "try_in_store": "Сыграй быстрые партии в пределах четырёх октав, попробуй выбрать пресет через контроллер.",
+        "question": "Готов ли ты сократить диапазон ради компактности, не теряя динамику и удобные органы управления?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
     {
       "id": "arturia-keylabessential61-mk3",
       "brand": "Arturia",
@@ -126,6 +285,114 @@
         "question": "Будешь ли ты включать инструмент чаще благодаря тому, что он играет сам?",
         "try_in_store": "Послушай пианино тихо и громко через динамики и наушники; проверь настройку чувствительности.",
         "data_warning": "Магазин показывал общую стартовую цену для нескольких модификаций — поэтому здесь нет достоверного ценового ориентира на конкретный CT-S1."
+      }
+    },
+    {
+      "id": "casio-cts1-76",
+      "brand": "Casio",
+      "model": "CT-S1-76",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 1140,
+      "depth_mm": 258,
+      "height_mm": 83,
+      "weight_kg": 5.3,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "76 touch sensitive keys, onboard sounds, speakers; longer model than CT-S1",
+          "url": "https://www.casio.com/vn/electronic-musical-instruments/brands/casiotone/cts1-76/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если простота CT-S1 нравится, но хочется большего диапазона для аккордов и мелодии двумя руками.",
+        "not_for": "Не подходит для узкого стола: 76 клавиш заметно шире исходного CT-S1 и сложнее хранить рядом с компьютером.",
+        "try_in_store": "Сыграй одинаковую пьесу на CT-S1 с 61 клавишей и версии на 76; оцени, правда ли нужен диапазон.",
+        "question": "Будет ли дополнительная октава полезнее тебе, чем свободное место на столе?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "casio-cts1000v",
+      "brand": "Casio",
+      "model": "CT-S1000V",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": true,
+      "width_mm": 930,
+      "depth_mm": 258,
+      "height_mm": 91,
+      "weight_kg": 4.7,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 touch-response keys, 900 tones including lyric synthesis, speakers, dimensions 930 x 258 x 91",
+          "url": "https://www.casio.com/vn/electronic-musical-instruments/product.CT-S1000V/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для экспериментов со звуками, необычными вокальными тембрами и самостоятельной игрой без компьютера.",
+        "not_for": "Не стоит переплачивать за вокальный синтез, если тебе достаточно пианино и обычных электронных звуков.",
+        "try_in_store": "Проверь вокальный синтез и управление звуком, но оцени и самый простой сценарий: включить и сыграть аккорды.",
+        "question": "Нужна ли тебе необычная вокальная функция или она лишь отвлечёт от первых занятий?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
       }
     },
     {
@@ -259,6 +526,440 @@
       }
     },
     {
+      "id": "casio-cts400",
+      "brand": "Casio",
+      "model": "CT-S400",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 930,
+      "depth_mm": 258,
+      "height_mm": 84,
+      "weight_kg": 4.5,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 keys, 3-level touch, AiX voices, speaker system and USB MIDI",
+          "url": "https://www.casio.com/vn/electronic-musical-instruments/product.CT-S400/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Подойдёт, если хочется играть без ноутбука, но иногда пробовать ритмы, сопровождение и разные тембры.",
+        "not_for": "Не лучший выбор, если ищешь маленькие клавиши или минимальную панель без множества дополнительных функций.",
+        "try_in_store": "Включи простой звук фортепиано, выключи сопровождение и проверь, не отвлекает ли меню от игры.",
+        "question": "Ты будешь использовать 600 звуков и автоаккомпанемент, или важнее один хороший тембр и простота?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "casio-cts500",
+      "brand": "Casio",
+      "model": "CT-S500",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": true,
+      "width_mm": 930,
+      "depth_mm": 258,
+      "height_mm": 91,
+      "weight_kg": 4.7,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 full-sized velocity keys, onboard AiX sound, speakers, class-compliant USB MIDI, 930 x 258 x 91mm, included WU-BT10 Bluetooth MIDI adapter",
+          "url": "https://www.casio.com/us/electronic-musical-instruments/product.CT-S500/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Подойдёт для самостоятельной игры и домашнего сочинения с более богатой палитрой звуков, чем у простых моделей.",
+        "not_for": "Избыточен, если нужна только удобная клавиатура для Reaper и ты не собираешься использовать встроенные тембры.",
+        "try_in_store": "Проверь звучание электрического пианино и синтезаторного пэда; затем сравни с CT-S400 по скорости выбора тембра.",
+        "question": "Ты действительно будешь сочинять на встроенных тембрах, или всё равно переключишься на VST?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "casio-ctx3000",
+      "brand": "Casio",
+      "model": "CT-X3000",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 948,
+      "depth_mm": 384,
+      "height_mm": 116,
+      "weight_kg": 6.9,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 touch-sensitive keys, 800 tones, 6W stereo speakers, 948 x 384 x 116",
+          "url": "https://www.casio.com/us/electronic-musical-instruments/product.CT-X3000/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "d_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Тем, кто хочет аранжировать музыку непосредственно на клавишах и использовать встроенную многодорожечную запись.",
+        "not_for": "Вряд ли оправдан, если у тебя уже есть Reaper и сложный автоаккомпанемент только мешает начать заниматься.",
+        "try_in_store": "Попробуй сделать простую двухчастную аранжировку на самом инструменте и засечь количество действий.",
+        "question": "Будешь ли ты записывать партии внутри клавиш или привык работать только в Reaper?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "casio-ctx700",
+      "brand": "Casio",
+      "model": "CT-X700",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 948,
+      "depth_mm": 350,
+      "height_mm": 109,
+      "weight_kg": 4.3,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, AiX sound, speakers, USB-MIDI, dimensions 948 x 350 x 109",
+          "url": "https://www.casio.com/us/electronic-musical-instruments/product.CT-X700/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для домашних занятий и игры с автоматическим сопровождением, если нравятся более традиционные клавиатуры.",
+        "not_for": "Корпус глубже компактных Casiotone, а набор учебных функций может оказаться лишним при записи в Reaper.",
+        "try_in_store": "Поставь CT-X700 на реальный стол и сравни доступность клавиш, экрана и управление с CT-S400.",
+        "question": "Нужно ли тебе обучающее меню с аккомпанементом или проще обойтись без него?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "korg-ek50",
+      "brand": "Korg",
+      "model": "EK-50",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 994,
+      "depth_mm": 392,
+      "height_mm": 132,
+      "weight_kg": 7.5,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, built-in PCM sounds, dual 10W speakers, USB MIDI, 994 x 392 x 132",
+          "url": "https://www.korg.com/uk/products/synthesizers/ek_50/specifications.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если тебе интереснее играть с готовыми стилями и сопровождением, чем управлять виртуальными инструментами.",
+        "not_for": "Корпус довольно глубокий, а система стилей не нужна для простых упражнений и MIDI-записи в Reaper.",
+        "try_in_store": "Сыграй минуту без сопровождения, затем включи стиль и посмотри, добавляет ли это вдохновения.",
+        "question": "Будешь ли использовать встроенный аранжировщик каждый день, или он только усложнит работу?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "korg-i3",
+      "brand": "Korg",
+      "model": "i3 Music Workstation",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": null,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": null,
+      "depth_mm": null,
+      "height_mm": null,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, onboard PCM sound generator, styles and 16-track sequencing",
+          "url": "https://www.korg.live/us/products/synthesizers/i3/specifications.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [
+        "В изученной официальной спецификации встроенные динамики не подтверждены; их наличие не предполагаем."
+      ],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Тем, кто хочет писать последовательности, аранжировки и песни на самом инструменте без обязательного DAW.",
+        "not_for": "Сложнее простой переносной клавиатуры, а встроенные динамики официальными характеристиками не подтверждены.",
+        "try_in_store": "Попроси показать, как быстро создать и сохранить несколько дорожек, и заранее уточни способ аудиовывода.",
+        "question": "Нужна ли тебе отдельная рабочая станция, когда на компьютере уже есть Reaper?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "korg-keystage61",
+      "brand": "Korg",
+      "model": "Keystage 61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 979,
+      "depth_mm": 234,
+      "height_mm": 82,
+      "weight_kg": 5.0,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 keys with velocity and polyphonic aftertouch, USB audio output interface, 979 x 234 x 82",
+          "url": "https://www.korg.com/download/global/html_manual/keystage/us/Topics/6-1_specification.htm",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": true,
+      "line_out": true,
+      "power_modes": [
+        "usb_bus",
+        "ac_adapter"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для выразительной игры виртуальными синтезаторами с полифоническим aftertouch и управлением параметрами.",
+        "not_for": "Это не самостоятельный синтезатор: аудиовыходы получают сигнал от компьютера, встроенного генератора звука нет.",
+        "try_in_store": "Открой VSTi с polyphonic aftertouch и попробуй давить на разные удерживаемые клавиши независимо.",
+        "question": "Нужна ли тебе тонкая выразительность aftertouch уже сейчас или лучше сэкономить на базовой клавиатуре?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "korg-kross2-61",
+      "brand": "Korg",
+      "model": "KROSS 2-61",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 935,
+      "depth_mm": 269,
+      "height_mm": 88,
+      "weight_kg": 3.8,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, internal synth, MIDI and USB audio, 935 x 269 x 88",
+          "url": "https://www.korg.com/tw/products/synthesizers/kross2/specifications.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": true,
+      "line_out": true,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для самостоятельных синтезаторных звуков и сценических партий с возможностью гибкой работы с аудио и MIDI.",
+        "not_for": "Встроенных динамиков нет, поэтому без наушников или внешних колонок после включения звука не услышишь.",
+        "try_in_store": "Подключи наушники, выбери лид, пэд и пианино, затем посмотри, сколько шагов занимает смена звука.",
+        "question": "Хочешь ли ты звуки в самостоятельном устройстве или удобнее хранить их в программных инструментах?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
       "id": "korg-microarranger",
       "brand": "Korg",
       "model": "microARRANGER",
@@ -315,6 +1016,65 @@
         "try_in_store": "Проверь все 61 клавишу, динамики, питание, кнопки и возможность получить нужные аксессуары.",
         "question": "Насколько ты готов рисковать с состоянием и обслуживанием старой модели?",
         "data_warning": "Архивная модель: совместимость с современным компьютером, порты, состояние и стоимость ремонта конкретного экземпляра требуют отдельной проверки."
+      }
+    },
+    {
+      "id": "korg-microkeyair-61",
+      "brand": "Korg",
+      "model": "microKEY Air 61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "mini",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": true,
+      "width_mm": 850,
+      "depth_mm": 139,
+      "height_mm": 54,
+      "weight_kg": null,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 mini, Bluetooth LE MIDI, USB, AA battery for wireless MIDI",
+          "url": "https://www.korg.com/ir/products/computergear/microkey2_air/page_1.php",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "claim": "velocity-sensitive keyboard",
+          "url": "https://cdn.korg.com/us/support/download/files/ff0427bd83f4857e69f0a277dd751bd0.pdf",
+          "source_type": "manual",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Bluetooth MIDI означает беспроводную передачу нот, НЕ встроенный звук. Местную цену и наличие Air-61 нужно уточнить перед публикацией.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus_power",
+        "batteries_for_wireless_midi"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если нужен формат microKEY с возможностью отправлять MIDI по Bluetooth на совместимый хост.",
+        "not_for": "Если Bluetooth воспринимается как способ получать звук без компьютера: это только передача MIDI.",
+        "try_in_store": "Проверь вживую соединение с конкретным устройством и задержку; сравни с USB.",
+        "question": "Ради какой конкретной задачи тебе нужен беспроводной MIDI, если есть USB?"
       }
     },
     {
@@ -393,65 +1153,6 @@
       }
     },
     {
-      "id": "korg-microkeyair-61",
-      "brand": "Korg",
-      "model": "microKEY Air 61",
-      "type": "midi_controller",
-      "market_status": "current",
-      "keys": 61,
-      "key_size": "mini",
-      "action": "synth",
-      "velocity": true,
-      "onboard_sounds": false,
-      "speakers": false,
-      "usb_midi": true,
-      "usb_audio": false,
-      "bluetooth_midi": true,
-      "width_mm": 850,
-      "depth_mm": 139,
-      "height_mm": 54,
-      "weight_kg": null,
-      "prices": [],
-      "source_refs": [
-        {
-          "claim": "61 mini, Bluetooth LE MIDI, USB, AA battery for wireless MIDI",
-          "url": "https://www.korg.com/ir/products/computergear/microkey2_air/page_1.php",
-          "source_type": "manufacturer",
-          "checked_at": "2026-11-06"
-        },
-        {
-          "claim": "velocity-sensitive keyboard",
-          "url": "https://cdn.korg.com/us/support/download/files/ff0427bd83f4857e69f0a277dd751bd0.pdf",
-          "source_type": "manual",
-          "checked_at": "2026-11-06"
-        }
-      ],
-      "notes": "Bluetooth MIDI означает беспроводную передачу нот, НЕ встроенный звук. Местную цену и наличие Air-61 нужно уточнить перед публикацией.",
-      "external_sound_source_required": true,
-      "availability_basis": "no_verified_live_inventory",
-      "human_testing_required": [
-        "key_feel",
-        "quiet_loud_dynamics",
-        "two_handed_play",
-        "desk_fit"
-      ],
-      "midi_din": null,
-      "headphones_out": null,
-      "line_out": null,
-      "power_modes": [
-        "usb_bus_power",
-        "batteries_for_wireless_midi"
-      ],
-      "notes_on_uncertainty": [],
-      "data_quality": "research_seed",
-      "editorial": {
-        "best_for": "Если нужен формат microKEY с возможностью отправлять MIDI по Bluetooth на совместимый хост.",
-        "not_for": "Если Bluetooth воспринимается как способ получать звук без компьютера: это только передача MIDI.",
-        "try_in_store": "Проверь вживую соединение с конкретным устройством и задержку; сравни с USB.",
-        "question": "Ради какой конкретной задачи тебе нужен беспроводной MIDI, если есть USB?"
-      }
-    },
-    {
       "id": "m-audio-keystation61-mk3",
       "brand": "M-Audio",
       "model": "Keystation 61 MK3",
@@ -519,6 +1220,218 @@
       }
     },
     {
+      "id": "maudio-oxygen61-mkv",
+      "brand": "M-Audio",
+      "model": "Oxygen 61 MKV",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 977,
+      "depth_mm": 243,
+      "height_mm": 94,
+      "weight_kg": 3.4,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 full-size velocity keys, knobs, faders, pads, 977 x 243 x 94",
+          "url": "https://www.m-audio.com/keyboard-controllers/oxygen-v-61.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если хочешь управлять виртуальными инструментами и микшером прямо во время сочинения и записи.",
+        "not_for": "Встроенных звуков нет; панель с фейдерами не нужна, если записываешь только обычную мелодию.",
+        "try_in_store": "Открой Reaper и проверь скорость назначений фейдеров и контроллеров, а не только ощущения клавиш.",
+        "question": "Ты намерен использовать фейдеры и пэды или достаточно минимального MIDI-контроллера?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "maudio-oxygenpro61",
+      "brand": "M-Audio",
+      "model": "Oxygen Pro 61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 965.2,
+      "depth_mm": 264.2,
+      "height_mm": 83.8,
+      "weight_kg": 4.8,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity-sensitive semiweighted keys with channel aftertouch, MIDI out, 965.2 x 264.2 x 83.8",
+          "url": "https://www.m-audio.com/keyboard-controllers/oxygen-pro-61.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": true,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для работы с виртуальными инструментами, где нужны aftertouch, динамика и много назначаемых органов управления.",
+        "not_for": "Не особенно полезен, если нужен только звук пианино без компьютера, и избыточен для самых первых упражнений.",
+        "try_in_store": "Сравни плавность тихих нажатий, отдачу полувзвешенных клавиш и выразительность aftertouch в VST.",
+        "question": "Услышишь ли ты практическую разницу от aftertouch или это функция для далёкого будущего?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "nektar-impactgx49",
+      "brand": "Nektar",
+      "model": "Impact GX49",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 49,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 803,
+      "depth_mm": 197,
+      "height_mm": 70,
+      "weight_kg": 2.18,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "49 velocity-sensitive standard keys, USB MIDI, narrow controls, ~803mm wide",
+          "url": "https://nektartech.com/products/impact-gx49-61/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для компактной и простой MIDI-клавиатуры, если для тебя допустимо ограничение в четыре октавы.",
+        "not_for": "В сравнении с 61-клавишными вариантами меньше диапазон для левой и правой руки; собственного звука нет.",
+        "try_in_store": "Попробуй сыграть несколько аккордов левой рукой одновременно с мелодией правой без переключения октавы.",
+        "question": "Потеря одной октавы будет мешать или выигрыш места на столе окажется важнее?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "nektar-impactgx61",
+      "brand": "Nektar",
+      "model": "Impact GX61",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 965,
+      "depth_mm": 197,
+      "height_mm": 70,
+      "weight_kg": 2.72,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 full-size velocity-sensitive keys and basic MIDI controls, ~965mm wide",
+          "url": "https://nektartech.com/products/impact-gx49-61/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если нужна обычная пятиоктавная MIDI-клавиатура с минимумом визуальных отвлечений и простым управлением.",
+        "not_for": "Звук воспроизводит компьютер или внешний MIDI-инструмент, а встроенных пэдов и богатой панели нет.",
+        "try_in_store": "Сравни ход клавиш и свободное место для мыши на столе с SE61 и M-Audio Keystation.",
+        "question": "Нужен ли тебе базовый инструмент для игры или хочется много дополнительных контроллеров?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
       "id": "nektar-se61",
       "brand": "Nektar",
       "model": "SE61",
@@ -583,6 +1496,112 @@
         "not_for": "Если обязательно нужен собственный звук или подтверждённые габариты для очень узкого стола.",
         "try_in_store": "Проверь не только ощущение клавиш, но и возможность комфортно играть очень тихо.",
         "question": "Не окажется ли экономия меньше ценности возможности включить инструмент без компьютера?"
+      }
+    },
+    {
+      "id": "novation-launchkey49-mk4",
+      "brand": "Novation",
+      "model": "Launchkey 49 MK4",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 49,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 730,
+      "depth_mm": 263.5,
+      "height_mm": 93,
+      "weight_kg": 4.08,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "49 semi-weighted velocity keys, 16 pads, chord modes, width 730mm",
+          "url": "https://us.novationmusic.com/products/launchkey-49",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": true,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для работы с DAW, управления инструментами и изучения аккордовых последовательностей при ограниченной ширине стола.",
+        "not_for": "Диапазон в 49 клавиш для игры двумя руками может оказаться тесным, а собственных звуков нет.",
+        "try_in_store": "В Reaper попробуй аккорды левой рукой и мелодию правой; не забывай о настройке MIDI-контроллера.",
+        "question": "Хватит ли тебе четырёх октав, или полезнее 61 клавиша при почти такой же рабочей схеме?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "novation-launchkey61-mk4",
+      "brand": "Novation",
+      "model": "Launchkey 61 MK4",
+      "type": "midi_controller",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": false,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": false,
+      "bluetooth_midi": null,
+      "width_mm": 895,
+      "depth_mm": 263.5,
+      "height_mm": 93,
+      "weight_kg": 4.78,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 semi-weighted velocity keys, pad controls, MIDI output, 895 x 263.5 x 93",
+          "url": "https://novationmusic.com/products/launchkey-61",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": true,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": true,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для тех, кто пишет музыку в Reaper и хочет контролировать синтезаторы, фейдеры и аккорды с клавиатуры.",
+        "not_for": "Обычное включение без компьютера не даст звука, а богатая панель управления может оказаться лишней.",
+        "try_in_store": "Попроси продемонстрировать работу с Reaper через стандартный MIDI/HUI, а не только Ableton или Logic.",
+        "question": "Будешь ли ты пользоваться контроллерами и режимами аккордов или важнее простая клавиатура?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
       }
     },
     {
@@ -672,6 +1691,332 @@
       }
     },
     {
+      "id": "roland-gokeys5",
+      "brand": "Roland",
+      "model": "GO:KEYS 5",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": true,
+      "width_mm": 950,
+      "depth_mm": 286,
+      "height_mm": 87,
+      "weight_kg": 4.9,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, onboard ZEN-Core tones, speakers, Bluetooth audio and MIDI, USB audio MIDI",
+          "url": "https://www.roland.com/global/products/gokeys_5/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для сочинения идей на готовых современных звуках, аккордовых последовательностях и встроенном сопровождении.",
+        "not_for": "Если предпочитаешь простую игру на одном пианино, множество встроенных режимов может отвлекать.",
+        "try_in_store": "Выбери три тембра, запиши короткую музыкальную идею и проверь, насколько быстро переключается режим.",
+        "question": "Помогут ли тебе аккордовые секвенции сочинять песни или ты предпочитаешь всё сыграть самостоятельно?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "roland-junod6",
+      "brand": "Roland",
+      "model": "JUNO-D6",
+      "type": "synthesizer",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": false,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 1005,
+      "depth_mm": 324,
+      "height_mm": 94,
+      "weight_kg": 5.8,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, onboard ZEN-Core sound engine, USB audio/MIDI, no built-in speaker listing",
+          "url": "https://www.roland.com/global/products/juno-d6/",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": true,
+      "line_out": true,
+      "power_modes": [
+        "ac_adapter",
+        "usb_bus"
+      ],
+      "notes_on_uncertainty": [
+        "У JUNO-D6 есть собственный звуковой движок, но встроенные динамики не заявлены: нужны наушники/внешний вывод."
+      ],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если хочешь полноценные сценические синтезаторные звуки и работать с собственными музыкальными сценами.",
+        "not_for": "Не подходит как инструмент «поставил на стол и заиграл»: для воспроизведения необходимы наушники или колонки.",
+        "try_in_store": "Подключи наушники, переключи три сцены и проверь, насколько быстро можно записать идею по USB.",
+        "question": "Тебе нужен самостоятельный звуковой движок без встроенных динамиков или достаточно MIDI и Reaper?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "yamaha-ck61",
+      "brand": "Yamaha",
+      "model": "CK61",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "piano",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 910,
+      "depth_mm": 291,
+      "height_mm": 109,
+      "weight_kg": 5.6,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 initial-touch keys, stage piano and organ sounds, stereo speakers, USB audio, 910 x 291 x 109",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/products/stagekeyboards/ck/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если ты больше любишь живые тембры пианино, органа и электропианино и хочешь играть, а не листать меню.",
+        "not_for": "Для первых простых занятий функциональность сценического инструмента может оказаться избыточной по цене.",
+        "try_in_store": "Сравни три собственных тембра — акустическое пианино, Rhodes и орган — при одинаковой громкости.",
+        "question": "Оправдывает ли более музыкальная панель управления переход от недорогого автономного инструмента?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "yamaha-ez310",
+      "brand": "Yamaha",
+      "model": "EZ-310",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 941,
+      "depth_mm": 317,
+      "height_mm": 105,
+      "weight_kg": 4.6,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 touch-sensitive keys and light-up learning keys, 941 x 317 x 105",
+          "url": "https://usa.yamaha.com/products/musical_instruments/keyboards/portable_keyboards/ez-310/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Подойдёт, если подсветка клавиш помогает разбирать мелодии по шагам и делает самостоятельные занятия проще.",
+        "not_for": "Подсветка может отвлекать от слуха и ощущения клавиатуры, а для записи в Reaper не даёт особых преимуществ.",
+        "try_in_store": "Попробуй одну и ту же мелодию с подсветкой и без неё, затем сыграй по памяти, не глядя.",
+        "question": "Будет ли световая подсказка помогать учиться или превратит игру в механическое нажатие подсвеченных клавиш?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "yamaha-np15",
+      "brand": "Yamaha",
+      "model": "NP-15",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "piano",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 1052,
+      "depth_mm": 260,
+      "height_mm": 104,
+      "weight_kg": 5.2,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 touch-sensitive box-type keys, 15 sounds, speakers, 1052 x 260 x 104, USB MIDI/audio",
+          "url": "https://usa.yamaha.com/products/musical_instruments/keyboards/piaggero/np-15/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если хочется играть в основном на фортепиано и не отвлекаться на сотни звуков и ритмов.",
+        "not_for": "Ширина больше большинства 61-клавишных синтезаторов, а фортепианная специализация ограничивает эксперименты.",
+        "try_in_store": "Сравни тихую динамику, повтор одних нот и ощущение клавиш с Casio CT-S1 и Yamaha PSR-E383.",
+        "question": "Тебе важнее ощущение инструмента, близкого к пианино, или разнообразие синтезаторных тембров?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "yamaha-np35",
+      "brand": "Yamaha",
+      "model": "NP-35",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "piano",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 1260,
+      "depth_mm": 260,
+      "height_mm": 104,
+      "weight_kg": 6.0,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "76 graded soft touch keys, built-in speakers, 1260 x 260 x 104, USB MIDI/audio",
+          "url": "https://usa.yamaha.com/products/musical_instruments/keyboards/piaggero/np-15/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для постепенного обучения игре двумя руками с увеличенным диапазоном, если особенно интересны партии фортепиано.",
+        "not_for": "Ширина 126 сантиметров может сделать инструмент неудобным в маленькой комнате или на стандартном столе.",
+        "try_in_store": "Проверь вес нажатия в нижнем и верхнем регистрах и удобство игры двумя руками сидя.",
+        "question": "Готов ли ты отдать больше места ради 76 клавиш и градации чувствительности по диапазону?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
       "id": "yamaha-psre383",
       "brand": "Yamaha",
       "model": "PSR-E383",
@@ -755,6 +2100,221 @@
         "not_for": "Если критична малая глубина корпуса или минимальное число кнопок.",
         "try_in_store": "Проверь, удобна ли глубина 31,7 см на столе, и попробуй играть без автоаккомпанемента.",
         "question": "Нужны ли тебе учебные и аккомпанирующие функции, или ты ими почти не воспользуешься?"
+      }
+    },
+    {
+      "id": "yamaha-psre473",
+      "brand": "Yamaha",
+      "model": "PSR-E473",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 992,
+      "depth_mm": 404,
+      "height_mm": 136,
+      "weight_kg": 7.0,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 velocity keys, onboard sound, speakers, USB MIDI/audio interface, 992 x 404 x 136",
+          "url": "https://usa.yamaha.com/products/musical_instruments/keyboards/portable_keyboards/psr-e473/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для игры с аранжировками, аккомпанементом и более широким управлением, чем на начальных Yamaha PSR.",
+        "not_for": "Очень глубокий корпус требует отдельного места, а возможности аранжировки могут оказаться ненужной сложностью.",
+        "try_in_store": "Выключи стили, сыграй три короткие партии, затем попробуй запись звука через USB в компьютер.",
+        "question": "Ты хочешь создавать законченные аранжировки в клавишах или записывать простые MIDI-партии?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "yamaha-psrew320",
+      "brand": "Yamaha",
+      "model": "PSR-EW320",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 1148,
+      "depth_mm": 317,
+      "height_mm": 105,
+      "weight_kg": 5.2,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "76 touch-sensitive keys, speakers, USB MIDI/audio, 1148 x 317 x 105",
+          "url": "https://usa.yamaha.com/products/musical_instruments/keyboards/portable_keyboards/psr-ew320/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для занятий и аккордов двумя руками, когда важны 76 клавиш, но не нужен дорогой аранжировщик.",
+        "not_for": "По сравнению с 61-клавишным PSR-E383 занимает больше места, хотя базовая философия игры похожа.",
+        "try_in_store": "Проверь, удобно ли тебе растянуть обе руки на 76 клавишах, и попробуй настройку Touch Response.",
+        "question": "Тебе действительно нужен дополнительный диапазон или удобнее компактный 61-клавишный инструмент?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "yamaha-psrew425",
+      "brand": "Yamaha",
+      "model": "PSR-EW425",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 76,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": true,
+      "bluetooth_midi": null,
+      "width_mm": 1200,
+      "depth_mm": 404,
+      "height_mm": 136,
+      "weight_kg": 8.3,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "76 velocity keys, arranger sounds, built-in speakers, USB MIDI/audio, 1200 x 404 x 136",
+          "url": "https://vn.yamaha.com/vi/musical-instruments/keyboards/products/portable-keyboards/psr-ew425/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter",
+        "aa_battery"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Если нужен широкий диапазон 76 клавиш и полноценное сопровождение для самостоятельной игры и репетиций.",
+        "not_for": "Габариты 120 на 40 сантиметров делают эту модель неподходящей для тесного рабочего места.",
+        "try_in_store": "Сравни полноту диапазона и качество собственных динамиков с меньшей Yamaha PSR-E473.",
+        "question": "Используешь ли ты 76 клавиш в своих композициях настолько часто, чтобы оправдать размеры?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
+      }
+    },
+    {
+      "id": "yamaha-psrsx600",
+      "brand": "Yamaha",
+      "model": "PSR-SX600",
+      "type": "portable_keyboard",
+      "market_status": "current",
+      "keys": 61,
+      "key_size": "standard",
+      "action": "synth",
+      "velocity": true,
+      "onboard_sounds": true,
+      "speakers": true,
+      "usb_midi": true,
+      "usb_audio": null,
+      "bluetooth_midi": null,
+      "width_mm": 1004,
+      "depth_mm": 410,
+      "height_mm": 134,
+      "weight_kg": 8.1,
+      "prices": [],
+      "source_refs": [
+        {
+          "claim": "61 touch-responsive keys, high-end arranger with built-in amplification, 1004 x 410 x 134",
+          "url": "https://usa.yamaha.com/products/musical_instruments/keyboards/arranger_workstations/psr-sx600/specs.html",
+          "source_type": "manufacturer",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "notes": "Характеристики по производителю. Локальная цена и наличие не подтверждены.",
+      "external_sound_source_required": false,
+      "availability_basis": "no_verified_live_inventory",
+      "human_testing_required": [
+        "key_feel",
+        "quiet_loud_dynamics",
+        "two_handed_play",
+        "desk_fit"
+      ],
+      "midi_din": null,
+      "headphones_out": null,
+      "line_out": null,
+      "power_modes": [
+        "ac_adapter"
+      ],
+      "notes_on_uncertainty": [],
+      "data_quality": "manufacturer_specs_no_local_stock",
+      "editorial": {
+        "best_for": "Для музыканта, который хочет управлять полноценным автоаккомпанементом и сочинять на самом инструменте.",
+        "not_for": "Начинающему с Reaper вряд ли понадобится тяжёлая система стилей, дисплей и сложная аранжировка.",
+        "try_in_store": "Попробуй за пять минут собрать простую песню со вступлением, куплетом и припевом без подсказок продавца.",
+        "question": "Ты хочешь самостоятельную музыкальную станцию или просто клавиатуру, на которой приятно играть?",
+        "data_warning": "Точная цена и наличие во Вьетнаме не проверены; уточни комплектацию у продавца."
       }
     }
   ],

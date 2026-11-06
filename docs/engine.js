@@ -7,6 +7,7 @@ export const defaults = Object.freeze({
 export const money = n => n == null ? 'Цена не подтверждена' : `${new Intl.NumberFormat('ru-RU').format(n)} ₫`;
 export const num = n => new Intl.NumberFormat('ru-RU').format(n);
 export const standalone = p => p.onboard_sounds === true && p.speakers === true;
+export const soundPath = p => p.onboard_sounds === true ? (p.speakers === true ? 'Встроенные звуки и динамики' : p.speakers === false ? 'Свои звуки, нужны наушники/колонки' : 'Свои звуки, динамики не подтверждены') : p.onboard_sounds === false ? 'MIDI: нужен внешний звуковой инструмент' : 'Источник звука требуется проверить';
 export const name = p => `${p.brand} ${p.model}`;
 export const activeOffers = (p, asOf = new Date()) => {
   const date = new Date(asOf); date.setHours(0, 0, 0, 0);
@@ -30,6 +31,7 @@ export function priceEvidence(p, asOf = new Date()) {
 export function compareAdvice(a, b, u) {
   if (!a || !b) return '';
   const as = standalone(a), bs = standalone(b);
+  if (a.onboard_sounds !== b.onboard_sounds && a.onboard_sounds != null && b.onboard_sounds != null) return `${name(a.onboard_sounds ? a : b)} создаёт звук внутри корпуса, а ${name(a.onboard_sounds ? b : a)} только передаёт MIDI-команды. Проверь, какой способ игры удобнее тебе.`;
   if (as !== bs) return `Главная развилка: ${name(as ? a : b)} играет через собственные динамики, а ${name(as ? b : a)} требует внешний источник звука. Выбирай по тому, как часто будешь играть без компьютера.`;
   if ((a.key_size === 'mini') !== (b.key_size === 'mini')) return `Главная развилка: ${name(a.key_size === 'mini' ? a : b)} компактнее по размеру самих клавиш. Но удобство для обеих рук нужно проверить лично.`;
   if (a.usb_audio !== b.usb_audio && a.usb_audio != null && b.usb_audio != null) return 'Одна модель поддерживает USB audio, другая — нет. Это про передачу звука в программу, а не про качество клавиш.';
@@ -40,7 +42,7 @@ export function compareAdvice(a, b, u) {
 }
 export function purchaseChecklist(p) {
   const items = ['Попроси показать точную модификацию, комплект и стоимость с аксессуарами.', 'Проверь все клавиши, особенно тихое нажатие и аккорд двумя руками.'];
-  items.push(standalone(p) ? 'Послушай встроенные динамики и проверь выход на наушники, если он тебе нужен.' : 'Возьми свой ноутбук или попроси показать звук через MIDI и виртуальный инструмент.');
+  items.push(standalone(p) ? 'Послушай встроенные динамики и проверь выход на наушники, если он тебе нужен.' : p.onboard_sounds === true ? 'Проверь наушники, внешний аудиовывод и комплект для воспроизведения собственного звука.' : 'Возьми свой ноутбук или попроси показать звук через MIDI и виртуальный инструмент.');
   if(p.key_size==='mini')items.push('Попробуй широкие аккорды и быстрые переходы: mini нравится не всем.');
   if(p.market_status==='legacy')items.push('Для б/у проверь порты, питание, работу кнопок и право на возврат.');
   items.push('Проверь цену, наличие и срок гарантии сегодня — данные на сайте не онлайн.');
@@ -97,7 +99,9 @@ export function recommend(products, u, date = new Date()) {
 }
 export function tradeoffs(p, u) {
   const cons = [];
-  if (!standalone(p)) cons.push('Для звука понадобится компьютер, телефон или другой MIDI-хост и программа с инструментом.');
+  if (p.onboard_sounds === false) cons.push('Для звука понадобится компьютер, телефон или другой MIDI-хост и программа с инструментом.');
+  else if (p.onboard_sounds === true && p.speakers === false) cons.push('Звук встроенный, но динамиков нет: понадобятся наушники или внешняя акустика.');
+  else if (p.onboard_sounds === true && p.speakers == null) cons.push('Встроенные динамики не подтверждены. Уточни, нужен ли внешний аудиовывод.');
   if (p.key_size === 'standard' && u.mini !== 'any') cons.push('Полноразмерные клавиши — важно проверить удобство для небольших рук.');
   if (p.key_size === 'mini') cons.push('На мини-клавишах может быть непривычно играть двумя руками.');
   if (p.width_mm == null) cons.push('Точные габариты нужно уточнить перед покупкой.');
@@ -106,6 +110,12 @@ export function tradeoffs(p, u) {
   return cons;
 }
 export function firstSound(p) {
+  if (p.onboard_sounds === true && !standalone(p)) return [
+    'Подключи питание по инструкции, затем наушники или внешние активные колонки к предусмотренному выходу.',
+    'Включи инструмент и выбери простой тембр пианино или синтезатора на его панели.',
+    'Сыграй знакомую мелодию и проверь динамику от тихого до громкого исполнения.',
+    'Если хочешь записывать в Reaper, отдельно проверь USB MIDI и USB audio: это разные возможности.'
+  ];
   if (standalone(p)) return [
     'Поставь клавиши удобно, подключи питание по инструкции (адаптер может продаваться отдельно).',
     'Включи инструмент и выбери простой звук пианино без сопровождения.',
