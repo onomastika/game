@@ -6,9 +6,9 @@ const products = JSON.parse(readFileSync(new URL('../catalog.json',import.meta.u
 const byId = id => products.find(p=>p.id===id);
 const date = new Date('2026-11-06T12:00:00');
 const choose = override => recommend(products,{...defaults,...override},date);
-test('catalog contains 80 unique products and URLs',()=>{
- assert.equal(products.length,80);
- assert.equal(new Set(products.map(p=>p.id)).size,80);
+test('catalog contains unique products and URLs',()=>{
+ assert.ok(products.length>=124);
+ assert.equal(new Set(products.map(p=>p.id)).size,products.length);
  for(const p of products){assert.ok(Array.isArray(p.source_refs));assert.ok(p.source_refs.length);for(const s of p.source_refs)assert.match(s.url,/^https:\/\//)}
 });
 test('velocity excludes CT-S200',()=>assert.equal(classify(byId('casio-cts200'),defaults,date).status,'excluded'));

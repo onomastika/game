@@ -5,11 +5,12 @@ import {recommend,defaults,classify} from '../engine.js';
 const dataset=JSON.parse(readFileSync(new URL('../catalog.json',import.meta.url),'utf8'));
 const products=dataset.products;
 const byModel=(brand,model)=>products.find(p=>p.brand===brand&&p.model===model);
-test('80 unique catalog entries, 11 brands, 40 newly extended',()=>{
- assert.equal(products.length,80);
- assert.equal(new Set(products.map(p=>p.id)).size,80);
+test('124 unique catalog entries, 11 brands, 44 added in v1.5',()=>{
+ assert.equal(products.length,124);
+ assert.equal(new Set(products.map(p=>p.id)).size,products.length);
  assert.equal(new Set(products.map(p=>p.brand)).size,11);
  assert.equal(products.filter(p=>p.data_quality==='spec_release_source_no_local_stock').length,40);
+ assert.equal(products.filter(p=>p.data_quality==='verified_new_batch_specs_no_local_stock').length,44);
 });
 test('year either sourced and dated or explicitly unknown; no invented releases after snapshot',()=>{
  assert.equal(dataset.year_policy.unknown_is_null,true);
@@ -28,8 +29,8 @@ test('year either sourced and dated or explicitly unknown; no invented releases 
    assert.ok(p.release_year_evidence.basis.length>5);
   }
  }
- assert.equal(unknown.length,2);
- assert.deepEqual(unknown.sort(),['korg-i3','korg-microarranger']);
+ assert.equal(unknown.length,0);
+ assert.deepEqual(unknown.sort(),[]);
 });
 test('key dates match documented model generation',()=>{
  for(const [brand,model,year] of [
@@ -48,7 +49,8 @@ test('year enrichment does not promote no-velocity or silent gear',()=>{
  const synth=byModel('Roland','FANTOM-06');
  assert.equal(synth.onboard_sounds,true);
  assert.equal(synth.speakers,false);
- assert.equal(classify(synth,{...defaults,standalone:'required'}).status,'excluded');
+ assert.equal(classify(synth,{...defaults,standalone:'required'}).status,'eligible');
+ assert.equal(classify(synth,{...defaults,speakersRequired:true}).status,'excluded');
  const r=recommend(products,defaults);
  assert.ok(r.selected.every(p=>p.verdict.checks.every(x=>x.status==='pass')));
 });

@@ -1,7 +1,7 @@
 // Pure, deterministic selection logic. Unknown evidence never silently becomes a pass.
 export const defaults = Object.freeze({
   intent: 'both', minKeys: 61, velocityRequired: true, mini: 'preferred',
-  standalone: 'preferred', budgetVnd: null, hardBudget: false,
+  standalone: 'preferred', speakersRequired: false, budgetVnd: null, hardBudget: false,
   maxWidthMm: null, includeUsed: false
 });
 export const money = n => n == null ? 'Цена не подтверждена' : `${new Intl.NumberFormat('ru-RU').format(n)} ₫`;
@@ -32,7 +32,7 @@ export function compareAdvice(a, b, u) {
   if (!a || !b) return '';
   const as = standalone(a), bs = standalone(b);
   if (a.onboard_sounds !== b.onboard_sounds && a.onboard_sounds != null && b.onboard_sounds != null) return `${name(a.onboard_sounds ? a : b)} создаёт звук внутри корпуса, а ${name(a.onboard_sounds ? b : a)} только передаёт MIDI-команды. Проверь, какой способ игры удобнее тебе.`;
-  if (as !== bs) return `Главная развилка: ${name(as ? a : b)} играет через собственные динамики, а ${name(as ? b : a)} требует внешний источник звука. Выбирай по тому, как часто будешь играть без компьютера.`;
+  if (as !== bs) return `Главная развилка: ${name(as ? a : b)} играет через собственные динамики, а ${name(as ? b : a)} не имеет подтверждённых встроенных динамиков. Это не значит, что ему нужен компьютер: проверь собственный звуковой движок и выходы для наушников.`;
   if ((a.key_size === 'mini') !== (b.key_size === 'mini')) return `Главная развилка: ${name(a.key_size === 'mini' ? a : b)} компактнее по размеру самих клавиш. Но удобство для обеих рук нужно проверить лично.`;
   if (a.usb_audio !== b.usb_audio && a.usb_audio != null && b.usb_audio != null) return 'Одна модель поддерживает USB audio, другая — нет. Это про передачу звука в программу, а не про качество клавиш.';
   const prices=[priceEvidence(a),priceEvidence(b)];
@@ -54,7 +54,8 @@ export function classify(p, user, asOf = new Date()) {
   check('Клавиши', p.keys == null ? 'verify' : p.keys >= user.minKeys ? 'pass' : 'fail', `${p.keys ?? '—'} / минимум ${user.minKeys}`);
   if (user.velocityRequired) check('Динамика', p.velocity === true ? 'pass' : p.velocity === false ? 'fail' : 'verify', p.velocity == null ? 'Нет точных данных' : p.velocity ? 'Есть' : 'Нет');
   if (user.mini === 'required') check('Мини-клавиши', !p.key_size ? 'verify' : p.key_size === 'mini' ? 'pass' : 'fail', p.key_size === 'mini' ? 'Мини' : 'Не мини');
-  if (user.standalone === 'required') check('Без компьютера', p.onboard_sounds === false || p.speakers === false ? 'fail' : p.onboard_sounds == null || p.speakers == null ? 'verify' : 'pass', standalone(p) ? 'Свой звук и динамики' : 'Нужен источник звука');
+  if (user.standalone === 'required') check('Без компьютера', p.onboard_sounds === true ? 'pass' : p.onboard_sounds === false ? 'fail' : 'verify', soundPath(p));
+  if (user.speakersRequired) check('Встроенные динамики', p.onboard_sounds === false || p.speakers === false ? 'fail' : p.onboard_sounds === true && p.speakers === true ? 'pass' : 'verify', soundPath(p));
   if (user.maxWidthMm != null && user.maxWidthMm > 0) check('Ширина', p.width_mm == null ? 'verify' : p.width_mm <= user.maxWidthMm ? 'pass' : 'fail', `${p.width_mm ?? '?'} / ${user.maxWidthMm} мм`);
   if (p.market_status === 'legacy' && !user.includeUsed) check('Новое устройство', 'fail', 'Архивная модель');
   if (user.hardBudget && user.budgetVnd != null) {
@@ -71,13 +72,13 @@ function routeScore(p, route, u) {
   const size = Number.isFinite(p.width_mm) ? p.width_mm : 1100;
   const price = lowestKnownPrice(p) ?? 16000000;
   let score = 0;
-  if (route === 'play') score += isStandalone ? 120 : -200;
+  if (route === 'play') score += isStandalone ? 120 : p.onboard_sounds === true ? 36 : -200;
   if (route === 'studio') score += p.usb_midi === true ? 80 : -150;
   if (route === 'compact') score += isMini ? 120 : 0;
   if (u.intent === 'play_now' && isStandalone) score += 36;
   if (u.intent === 'make_music' && p.usb_midi) score += 36;
   if (u.mini === 'preferred' && isMini) score += 38;
-  if (u.standalone === 'preferred' && isStandalone) score += 23;
+  if (u.standalone === 'preferred') score += isStandalone ? 23 : p.onboard_sounds === true ? 10 : 0;
   score -= size / 38;
   score -= price / 900000;
   // Stable tie-breaking always uses product ID.
@@ -91,7 +92,7 @@ export function recommend(products, u, date = new Date()) {
   const selected = [];
   const routes = u.intent === 'play_now' ? ['play','compact','studio'] : u.intent === 'make_music' ? ['studio','compact','play'] : ['play','studio','compact'];
   for (const route of routes) {
-    const pool = eligible.filter(p => !selected.some(s => s.id === p.id)).filter(p => route === 'play' ? standalone(p) : route === 'studio' ? p.usb_midi === true : p.key_size === 'mini');
+    const pool = eligible.filter(p => !selected.some(s => s.id === p.id)).filter(p => route === 'play' ? p.onboard_sounds === true : route === 'studio' ? p.usb_midi === true : p.key_size === 'mini');
     const choice = pool.sort((a,b) => routeScore(b,route,u) - routeScore(a,route,u) || a.id.localeCompare(b.id))[0];
     if (choice) selected.push({...choice, route});
   }

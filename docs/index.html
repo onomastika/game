@@ -53,7 +53,7 @@
               <div class="option-row" data-setting="mini"><button type="button" data-value="any">Любой</button><button type="button" data-value="preferred">Mini лучше</button><button type="button" data-value="required">Только mini</button></div>
             </fieldset>
             <fieldset>
-              <legend>Звук без компьютера</legend>
+              <legend>Собственные звуки без компьютера</legend>
               <div class="option-row" data-setting="standalone"><button type="button" data-value="no">Не нужно</button><button type="button" data-value="preferred">Желательно</button><button type="button" data-value="required">Обязательно</button></div>
             </fieldset>
             <label class="switch-row" for="velocity"><span><strong>Чувствительность к нажатию</strong><small>Чтобы тихое и сильное нажатие давали разный отклик</small></span><input id="velocity" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
@@ -70,6 +70,7 @@
                   <legend for="maxWidth">Максимальная ширина, см</legend>
                   <input id="maxWidth" type="number" min="30" max="250" placeholder="Например, 90" inputmode="numeric">
                 </fieldset>
+                <label class="small-check"><input id="speakerRequired" type="checkbox"><span>Встроенные динамики обязательны<small>Синтезаторы со своими звуками могут требовать наушники или колонки</small></span></label>
                 <label class="small-check"><input id="used" type="checkbox"><span>Показать архивные модели и б/у</span></label>
               </div>
             </details>

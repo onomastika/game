@@ -6,9 +6,9 @@ const data=JSON.parse(readFileSync(new URL('../catalog.json',import.meta.url),'u
 const products=data.products;
 const byId=id=>products.find(p=>p.id===id);
 const date = new Date('2026-11-06T12:00:00');
-test('29 new manufacturer-verified catalog entries, without invented prices',()=>{
- assert.equal(data.products.length,80);
- assert.equal(data.schema_version,'0.5.0');
+test('29 original v1.3 manufacturer-spec entries remain without invented prices',()=>{
+ assert.ok(data.products.length>=124);
+ assert.equal(data.schema_version,'0.6.0');
  const added=products.filter(p=>p.data_quality==='manufacturer_specs_no_local_stock');
  assert.equal(added.length,29);
  for(const p of added){
@@ -42,7 +42,8 @@ test('standalone keyboard, powered synthesizer and MIDI controller represent dif
 test('unknown speaker evidence never becomes standalone pass',()=>{
  const p=byId('korg-i3');
  assert.equal(p.speakers,null);
- assert.equal(classify(p,{...defaults,standalone:'required'},date).status,'pending');
+ assert.equal(classify(p,{...defaults,standalone:'required'},date).status,'eligible');
+ assert.equal(classify(p,{...defaults,speakersRequired:true},date).status,'pending');
 });
 test('USB audio and own sound are independent',()=>{
  const p=byId('korg-keystage61');
@@ -57,7 +58,7 @@ test('No unsupported claims of Vietnamese pricing in newly added records',()=>{
   assert.equal(classify(p,{...defaults,hardBudget:true,budgetVnd:2_000_000},date).checks.find(c=>c.label==='Строгий бюджет').status,'verify');
  }
 });
-test('recommender remains hard-constraint-safe for 80 model catalog',()=>{
+test('recommender remains hard-constraint-safe for expanded model catalog',()=>{
  for(const minKeys of [49,61,76])for(const intent of ['both','play_now','make_music'])for(const mini of ['required','preferred','any'])for(const standalone of ['required','preferred','no']){
   const r=recommend(products,{...defaults,minKeys,intent,mini,standalone},date);
   assert.ok(r.selected.length<=3);

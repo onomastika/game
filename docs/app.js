@@ -25,8 +25,8 @@ function toast(text){const el=$('#toast');el.textContent=text;el.classList.add('
 function typeText(p){return p.type === 'midi_controller' ? 'MIDI-контроллер' : p.type === 'portable_keyboard' ? 'Автономные клавиши' : 'Синтезатор / аранжировщик'}
 const routeNames={play:'МОЖНО ИГРАТЬ СРАЗУ',studio:'ДЛЯ REAPER И MIDI',compact:'МИНИ-КЛАВИШИ'};
 function tip(p,route){
- if(route==='play')return 'Сам создаёт звук и играет через динамики: нет необходимости запускать Reaper.';
- if(route==='studio')return 'Передаёт исполнение в Reaper. Для звучания нужен VSTi или другой генератор звука.';
+ if(route==='play')return standalone(p) ? 'Есть собственный звуковой движок и динамики: Reaper не нужен.' : 'Есть собственный звуковой движок; для игры подключи наушники или акустику.';
+ if(route==='studio')return p.onboard_sounds===true ? 'Может отправлять MIDI в Reaper и играть собственными тембрами через аудиовыход.' : 'Передаёт исполнение в Reaper. Для звучания нужен VSTi или другой генератор звука.';
  return 'Сохранены 61 клавиша в более узком профиле клавиш; удобство двух рук важно проверить.';
 }
 function pills(p){return `<div class="spec-pills"><span>${p.keys} клавиш</span><span>${p.key_size==='mini'?'Mini':'Полный размер'}</span><span>${p.velocity===true?'Динамика нажатия':p.velocity===false?'Без динамики':'Динамика — уточнить'}</span><span>${esc(soundPath(p))}</span></div>`}
@@ -51,8 +51,8 @@ function recCard(p,i){return `<article class="rec-card ${i===0?'featured':''}">
  <div class="rec-bottom"><button type="button" class="link-btn" data-detail="${esc(p.id)}" aria-expanded="${detailId===p.id&&detailContext==='recommendations'}">Проверка и детали →</button><button type="button" class="add-btn ${duel.includes(p.id)?'active':''}" data-compare="${esc(p.id)}" aria-pressed="${duel.includes(p.id)}">${duel.includes(p.id)?'✓ В сравнении':'+ Сравнить'}</button></div></article>`;}
 function conflictHtml(result){
  if(result.selected.length)return '';
- let details='В нашей небольшой базе сейчас нет подтверждённого совпадения. Обязательные требования не меняются без твоего участия.';
- const hasConflict=preferences.mini==='required'&&preferences.standalone==='required';
+ let details='В текущем каталоге нет подтверждённого совпадения. Обязательные требования не меняются без твоего участия.';
+ const hasConflict=preferences.mini==='required'&&preferences.standalone==='required'&&result.eligible.length===0;
  const actions=[];
  if(hasConflict){actions.push('<button data-change="standalone" data-value="preferred">Автономность → желательно</button>','<button data-change="mini" data-value="preferred">Mini → желательно</button>')}
  if(preferences.hardBudget){actions.push('<button data-change="hardBudget" data-value="false">Сделать бюджет ориентиром</button>')}
@@ -72,6 +72,7 @@ function renderSettings(){
  });
  $('#velocity').checked=Boolean(preferences.velocityRequired);
  $('#hardBudget').checked=Boolean(preferences.hardBudget);
+ $('#speakerRequired').checked=Boolean(preferences.speakersRequired);
  $('#used').checked=Boolean(preferences.includeUsed);
  $('#maxWidth').value=preferences.maxWidthMm!=null?preferences.maxWidthMm/10:'';
 }
@@ -91,7 +92,7 @@ function renderDetails(){
  const editorial=p.editorial??{};
  d.innerHTML=`<div class="detail-heading"><div><h3>${esc(name(p))}</h3><div class="muted">${esc(typeText(p))} · ${p.keys} клавиш · ${p.key_size==='mini'?'mini':'полный размер'} · ${esc(yearText(p))}</div></div><button type="button" class="quiet-btn" data-close-detail aria-label="Закрыть подробности">✕ Закрыть</button></div>
  <div class="detail-intro"><strong>Подойдёт, если</strong><p>${esc(editorial.best_for??'Тебе подходят его подтверждённые характеристики.')}</p><strong>Не выбирай вслепую, если</strong><p>${esc(editorial.not_for??'Нужен другой сценарий игры.')}</p></div>
- <div class="detail-grid"><div class="fact"><span>Год выхода модели</span><strong>${esc(yearFact(p))}</strong>${yearSource(p)}</div><div class="fact"><span>Звук без компьютера</span><strong>${standalone(p)?'Да, есть динамики':'Нет, нужен звуковой инструмент'}</strong></div><div class="fact"><span>USB MIDI</span><strong>${p.usb_midi===true?'Передаёт ноты':p.usb_midi===false?'Нет':'Неизвестно'}</strong></div><div class="fact"><span>USB audio</span><strong>${p.usb_audio===true?'Есть':p.usb_audio===false?'Нет':'Не проверено'}</strong></div><div class="fact"><span>Размеры корпуса</span><strong>${width?width/10+' × '+(p.depth_mm??'?')/10+' см':'Нужно уточнить'}</strong></div><div class="fact"><span>Чувствительность</span><strong>${p.velocity===true?'Есть':p.velocity===false?'Нет':'Нужно проверить'}</strong></div><div class="fact"><span>Источник звука</span><strong>${standalone(p)?'Встроенный':'VSTi / внешний генератор'}</strong></div></div>
+ <div class="detail-grid"><div class="fact"><span>Год выхода модели</span><strong>${esc(yearFact(p))}</strong>${yearSource(p)}</div><div class="fact"><span>Звук без компьютера</span><strong>${p.onboard_sounds===true?(p.speakers===true?'Да, есть динамики':'Да, через аудиовыход') : p.onboard_sounds===false?'Нет, нужен MIDI-хост':'Нужно проверить'}</strong></div><div class="fact"><span>USB MIDI</span><strong>${p.usb_midi===true?'Передаёт ноты':p.usb_midi===false?'Нет':'Неизвестно'}</strong></div><div class="fact"><span>USB audio</span><strong>${p.usb_audio===true?'Есть':p.usb_audio===false?'Нет':'Не проверено'}</strong></div><div class="fact"><span>Размеры корпуса</span><strong>${width?width/10+' × '+(p.depth_mm??'?')/10+' см':'Нужно уточнить'}</strong></div><div class="fact"><span>Чувствительность</span><strong>${p.velocity===true?'Есть':p.velocity===false?'Нет':'Нужно проверить'}</strong></div><div class="fact"><span>Динамики</span><strong>${p.speakers===true?'Встроенные':p.speakers===false?'Нужны внешние / наушники':'Не подтверждены'}</strong></div><div class="fact"><span>Источник звука</span><strong>${p.onboard_sounds===true?'Встроенный генератор звука':p.onboard_sounds===false?'VSTi / внешний генератор':'Нужно проверить'}</strong></div></div>
  ${width?`<div class="footprint"><div class="footprint-line"><div class="footprint-bar" style="width:${Math.min(width/11,100)}%"></div></div><div class="footprint-label">Ширина ${width/10} см. Шкала: 110 см = вся полоска. Перед покупкой оставь место для рук и кабелей.</div></div>`:''}
  <div class="detail-question"><span>ВОПРОС ДЛЯ РЕШЕНИЯ</span><p>${esc(editorial.question??'Будешь ли ты садиться за инструмент без дополнительной подготовки?')}</p></div>
  <h4>Где возможен компромисс</h4><ul>${cons.length?cons.map(x=>`<li>${esc(x)}</li>`).join(''):'<li>По имеющимся данным критических ограничений нет; ощущение клавиш всё равно нужно проверить лично.</li>'}</ul>
@@ -161,6 +162,7 @@ document.addEventListener('click',e=>{
 });
 $('#velocity').addEventListener('change',e=>{preferences.velocityRequired=e.target.checked;render()});
 $('#hardBudget').addEventListener('change',e=>{preferences.hardBudget=e.target.checked;render()});
+$('#speakerRequired').addEventListener('change',e=>{preferences.speakersRequired=e.target.checked;render()});
 $('#used').addEventListener('change',e=>{preferences.includeUsed=e.target.checked;render()});
 $('#maxWidth').addEventListener('change',e=>{const cm=Number(e.target.value);preferences.maxWidthMm=e.target.value&&Number.isFinite(cm)&&cm>0?Math.round(cm*10):null;render()});
 $('#search').addEventListener('input',e=>{query=e.target.value;displayLimit=12;detailId=null;detailContext=null;renderCatalog(recommend(products,preferences))});
@@ -169,7 +171,7 @@ $('#typeFilter').addEventListener('change',e=>{typeFilter=e.target.value;display
 $('#yearFilter').addEventListener('change',e=>{yearFilter=e.target.value;displayLimit=12;detailId=null;detailContext=null;renderCatalog(recommend(products,preferences));renderDetails()});
 $('#yearSort').addEventListener('change',e=>{yearSort=e.target.value;displayLimit=12;detailId=null;detailContext=null;renderCatalog(recommend(products,preferences));renderDetails()});
 $('#jumpDuel').addEventListener('click',()=>$('#duel').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}));
-if(preferences.budgetVnd!=null||preferences.hardBudget||preferences.maxWidthMm!=null||preferences.includeUsed)$('#advancedSettings').open=true;
+if(preferences.budgetVnd!=null||preferences.hardBudget||preferences.maxWidthMm!=null||preferences.includeUsed||preferences.speakersRequired)$('#advancedSettings').open=true;
 async function init(){try{
  const res=await fetch('/catalog.json',{cache:'no-store'});if(!res.ok)throw new Error(`HTTP ${res.status}`);
  const body=await res.json();if(!Array.isArray(body.products))throw new Error('Некорректный каталог');
