@@ -1,25 +1,35 @@
-# Keyboard Choice Lab — v1.1 (design refinement)
+# Клавиши. — Keyboard Choice Lab v1.2
 
-Dark, responsive, privacy-friendly keyboard chooser. No database, accounts, runtime dependencies or API keys.
+Помощник выбора музыкальных клавиш с акцентом на реальные сценарии игры, индивидуальные редакционные карточки, честные компромиссы и первый музыкальный сеанс.
 
-## Files
+## Основное
 
-- `index.html` — semantic UI
-- `styles.css` — visual language + responsive layouts
-- `engine.js` — pure matching, exclusions, freshness and tradeoffs
-- `app.js` — state, persistence, catalogue, comparisons and details
-- `catalog.json` — research snapshot (NOT live inventory)
-- `tests/engine.test.mjs` — matching logic tests
+- Сайт на статических файлах, без бэкенда, авторизации и базы.
+- 11 моделей с официальными ссылками на характеристики и редакционными полями `editorial`: `best_for`, `not_for`, `try_in_store`, `question`, опционально `data_warning`.
+- Возможность выбрать сценарий, размер клавиш, необходимость звука без ПК и ограничения.
+- Отдельно различаются MIDI, встроенный звук и USB audio.
+- Цена указывается только как датированный ориентир, не наличие; строгий бюджет требует свежей проверенной карточки точной модели.
+- Выбор двух моделей с текстовым объяснением решающего компромисса.
+- Практический маршрут для Reaper и автономного инструмента, чек-листы и магазинный 10-минутный тест.
 
-## Local development
+## Запуск и проверки
 
-Serve the directory over HTTP for ES modules: `python -m http.server 8000`; visit `http://localhost:8000/`.
-Run tests: `npm test`.
+Запускай каталог по HTTP, а не через `file://`, поскольку используются ESM-модули и `fetch`:
 
-## Cloudflare Workers (Git integration)
+```sh
+python -m http.server 8000 --directory .
+```
 
-Repository: `onomastika/game`; branch: `keyboard-choice-lab`; Root Directory: `docs`; Build command: leave empty; Deploy command: `npx wrangler deploy`.
+Открыть `http://localhost:8000/` из папки `docs`.
 
-No Supabase or backend needed. The UI does not collect personal information. Preferences stay in localStorage and migrate from v1. Prices are historic leads and not live stock.
+```sh
+npm test
+```
 
-No commits to `main`.
+Для Cloudflare Workers: Root directory `docs`; пустая команда сборки; Deploy command `npx wrangler deploy`. Репозиторий `onomastika/game`, ветка `keyboard-choice-lab`. Конфигурация находится в `wrangler.jsonc`.
+
+## Политика данных
+
+Исторические цены и технические характеристики — срез от 2026-11-06. Свежесть цены считается по отметке проверки. Источники на уровне каждой модели. Тексты о пригодности — редакционные интерпретации, не результат реального прослушивания; их следует проверять лично в магазине. Настройки хранятся только в браузере.
+
+История именно 10 итераций: `../CONTENT_ITERATIONS.md` в архиве проекта.

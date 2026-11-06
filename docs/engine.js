@@ -20,6 +20,32 @@ export const lowestKnownPrice = p => {
   const offers = (p.prices ?? []).filter(x => x.amount_vnd > 0 && x.kind !== 'msrp');
   return offers.length ? Math.min(...offers.map(x => x.amount_vnd)) : null;
 };
+export function priceEvidence(p, asOf = new Date()) {
+  const offers = (p.prices ?? []).filter(o => o.amount_vnd > 0 && o.kind !== 'msrp' && o.model_variant_confirmed === true && o.url && o.checked_at);
+  if (!offers.length) return null;
+  offers.sort((a,b) => a.amount_vnd - b.amount_vnd);
+  const offer = offers[0];
+  return { ...offer, fresh: activeOffers(p, asOf).some(o => o.url === offer.url && o.amount_vnd === offer.amount_vnd) };
+}
+export function compareAdvice(a, b, u) {
+  if (!a || !b) return '';
+  const as = standalone(a), bs = standalone(b);
+  if (as !== bs) return `Главная развилка: ${name(as ? a : b)} играет через собственные динамики, а ${name(as ? b : a)} требует внешний источник звука. Выбирай по тому, как часто будешь играть без компьютера.`;
+  if ((a.key_size === 'mini') !== (b.key_size === 'mini')) return `Главная развилка: ${name(a.key_size === 'mini' ? a : b)} компактнее по размеру самих клавиш. Но удобство для обеих рук нужно проверить лично.`;
+  if (a.usb_audio !== b.usb_audio && a.usb_audio != null && b.usb_audio != null) return 'Одна модель поддерживает USB audio, другая — нет. Это про передачу звука в программу, а не про качество клавиш.';
+  const prices=[priceEvidence(a),priceEvidence(b)];
+  if (prices.every(Boolean) && prices[0].amount_vnd !== prices[1].amount_vnd) return 'Указанные цены — только исторические ориентиры. Сравни их в день покупки, затем проверь ощущение клавиш; дешевле не обязательно удобнее.';
+  if (u.intent === 'make_music') return 'Обе модели подходят по формальным условиям: проверь настройку в Reaper, ощущение клавиш и то, какие органы управления нужны тебе реально.';
+  return 'По спецификациям решающего преимущества нет. Сравни ощущения рук, звук в твоём сценарии и число действий до начала игры.';
+}
+export function purchaseChecklist(p) {
+  const items = ['Попроси показать точную модификацию, комплект и стоимость с аксессуарами.', 'Проверь все клавиши, особенно тихое нажатие и аккорд двумя руками.'];
+  items.push(standalone(p) ? 'Послушай встроенные динамики и проверь выход на наушники, если он тебе нужен.' : 'Возьми свой ноутбук или попроси показать звук через MIDI и виртуальный инструмент.');
+  if(p.key_size==='mini')items.push('Попробуй широкие аккорды и быстрые переходы: mini нравится не всем.');
+  if(p.market_status==='legacy')items.push('Для б/у проверь порты, питание, работу кнопок и право на возврат.');
+  items.push('Проверь цену, наличие и срок гарантии сегодня — данные на сайте не онлайн.');
+  return items;
+}
 export function classify(p, user, asOf = new Date()) {
   const checks = [];
   function check(label, status, detail) { checks.push({label, status, detail}); }
@@ -76,20 +102,21 @@ export function tradeoffs(p, u) {
   if (p.key_size === 'mini') cons.push('На мини-клавишах может быть непривычно играть двумя руками.');
   if (p.width_mm == null) cons.push('Точные габариты нужно уточнить перед покупкой.');
   if ((p.prices ?? []).length === 0) cons.push('Нет подтверждённой локальной цены на конкретный вариант.');
-  if (p.notes_on_uncertainty?.length) cons.push(...p.notes_on_uncertainty.slice(0,1));
+  if (p.editorial?.data_warning) cons.push(p.editorial.data_warning);
   return cons;
 }
 export function firstSound(p) {
   if (standalone(p)) return [
-    'Поставь инструмент на стол и подключи питание (по инструкции к модели).',
-    'Включи динамики, выбери простой звук фортепиано.',
-    'Сыграй три ноты, затем тихо и громко — почувствуй динамику.',
-    'Попробуй четыре аккорда или короткую мелодию. Никакого компьютера.'
+    'Поставь клавиши удобно, подключи питание по инструкции (адаптер может продаваться отдельно).',
+    'Включи инструмент и выбери простой звук пианино без сопровождения.',
+    'Сыграй одни и те же ноты тихо, потом громко; при необходимости настрой чувствительность.',
+    'Запиши 30 секунд на телефон, сыграй знакомую мелодию и повтори завтра.'
   ];
   return [
-    'Подключи клавиатуру USB-кабелем к компьютеру.',
-    'В Reaper открой виртуальный инструмент (VSTi); MIDI сам по себе не создаёт звук.',
-    'Создай MIDI-дорожку, выбери устройство на входе и включи monitoring.',
-    'Услышь первые три ноты; затем запиши 30 секунд игры.'
+    'Подключи USB MIDI клавиатуру к компьютеру. Проверь, что система её видит.',
+    'В Reaper: Options → Preferences → Audio → MIDI Devices → включи устройство для входа.',
+    'Создай дорожку, вставь VSTi (например, установленное виртуальное пианино), выбери MIDI-вход.',
+    'Включи запись и monitoring, проверь аудиовыход (динамики/наушники/интерфейс) и сыграй три ноты.',
+    'Запиши 30 секунд MIDI и сохрани проект-шаблон, чтобы в следующий раз сразу играть.'
   ];
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "currency": "VND",
   "market": "Vietnam",
   "snapshot_at": "2026-11-06",
@@ -49,7 +49,14 @@
       "notes_on_uncertainty": [
         "Arturia exact product store says 890 mm, while generic overview includes 790 mm (likely reused other variant). Display 890 with conflict warning and confirm physical dimensions before purchase."
       ],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если хочешь не только играть, но и управлять виртуальными инструментами ручками, фейдерами и пэдами.",
+        "not_for": "Если главная цель — садиться и сразу играть без открытия программы: своих звуков здесь нет.",
+        "try_in_store": "Сравни равномерность тихих нот по всей клавиатуре и проверь, удобно ли доставать до регуляторов.",
+        "question": "Нужны ли тебе дополнительные контроллеры уже сейчас — или пока достаточно только клавиш?",
+        "data_warning": "Официальная карточка этой модификации указывает ширину 89 см, но на другой странице встречается противоречивый размер. Перепроверь габариты перед заказом."
+      }
     },
     {
       "id": "casio-cts1",
@@ -112,7 +119,14 @@
           "url": "https://nhaccutienmanh.vn/dan-organ-casiotone-ct-s1/",
           "note": "Страница продаёт 61 и 76 клавиш; цену 61-клавишной конфигурации следует подтвердить выбором варианта."
         }
-      ]
+      ],
+      "editorial": {
+        "best_for": "Для ежедневных коротких занятий: встроенные звуки и динамики позволяют обойтись без ноутбука.",
+        "not_for": "Если нужна именно мини-клавиатура или много сопровождений и автоаккомпанемента.",
+        "question": "Будешь ли ты включать инструмент чаще благодаря тому, что он играет сам?",
+        "try_in_store": "Послушай пианино тихо и громко через динамики и наушники; проверь настройку чувствительности.",
+        "data_warning": "Магазин показывал общую стартовую цену для нескольких модификаций — поэтому здесь нет достоверного ценового ориентира на конкретный CT-S1."
+      }
     },
     {
       "id": "casio-cts200",
@@ -165,7 +179,14 @@
         "NEGATIVE CONTROL — fails required velocity. Must be excluded by default.",
         "Official CT-S200 specifications omit Touch Response, unlike Casio CT-S300; verify no-velocity via manufacturer comparison before changing this negative control."
       ],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Для человека, которому не принципиальна динамика; в текущем подборе с обязательной динамикой не проходит.",
+        "not_for": "Если собираешься учиться выразительной игре с разной силой нажатия.",
+        "try_in_store": "Не ориентируйся на число звуков: сравни CT-S200 с CT-S300 по динамике на одинаковом тембре.",
+        "question": "Готов ли ты сознательно отказаться от управления динамикой?",
+        "data_warning": "В документации этой модели не указана чувствительность к нажатию; в отличие от CT-S300, не учитываем её как инструмент с динамикой."
+      }
     },
     {
       "id": "casio-cts300",
@@ -229,7 +250,13 @@
         "aa_battery"
       ],
       "notes_on_uncertainty": [],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если нужен автономный инструмент с ритмами и экраном без работы через компьютер.",
+        "not_for": "Если хочется минималистичную панель и сосредоточиться прежде всего на звучании пианино.",
+        "try_in_store": "Отключи ритмы и проверь сами клавиши; потом включи сопровождение и пойми, пригодится ли оно.",
+        "question": "Будешь ли реально пользоваться ритмами и автоаккомпанементом?"
+      }
     },
     {
       "id": "korg-microarranger",
@@ -281,7 +308,14 @@
       "notes_on_uncertainty": [
         "Legacy; USB MIDI and audio remain unknown; do not assume modern USB workflow."
       ],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Редкий путь к сочетанию 61 mini, собственного звука и динамики — только после проверки конкретного б/у экземпляра.",
+        "not_for": "Если нужен простой современный USB-сценарий или гарантия на новый инструмент.",
+        "try_in_store": "Проверь все 61 клавишу, динамики, питание, кнопки и возможность получить нужные аксессуары.",
+        "question": "Насколько ты готов рисковать с состоянием и обслуживанием старой модели?",
+        "data_warning": "Архивная модель: совместимость с современным компьютером, порты, состояние и стоимость ремонта конкретного экземпляра требуют отдельной проверки."
+      }
     },
     {
       "id": "korg-microkey2-61",
@@ -350,7 +384,13 @@
         "usb_bus_power"
       ],
       "notes_on_uncertainty": [],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если важны 61 мини-клавиша и минимальная глубина на столе, а звук готов получать через Reaper.",
+        "not_for": "Если захочешь играть в любой момент без компьютера или другого MIDI-хоста.",
+        "try_in_store": "Попробуй двумя руками аккорд и мелодию, затем запиши тихие и громкие MIDI-ноты.",
+        "question": "Сможешь ли ты держать готовый шаблон Reaper, чтобы не тратить каждый раз время на настройку?"
+      }
     },
     {
       "id": "korg-microkeyair-61",
@@ -403,7 +443,13 @@
         "batteries_for_wireless_midi"
       ],
       "notes_on_uncertainty": [],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если нужен формат microKEY с возможностью отправлять MIDI по Bluetooth на совместимый хост.",
+        "not_for": "Если Bluetooth воспринимается как способ получать звук без компьютера: это только передача MIDI.",
+        "try_in_store": "Проверь вживую соединение с конкретным устройством и задержку; сравни с USB.",
+        "question": "Ради какой конкретной задачи тебе нужен беспроводной MIDI, если есть USB?"
+      }
     },
     {
       "id": "m-audio-keystation61-mk3",
@@ -464,7 +510,13 @@
       "line_out": null,
       "power_modes": [],
       "notes_on_uncertainty": [],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если нужны полноразмерные клавиши для записи MIDI без дополнительных панелей и сложного управления.",
+        "not_for": "Если принципиальны мини-клавиши или самостоятельный звук.",
+        "try_in_store": "Сравни усилие клавиш с двумя другими моделями; проверь, не мешает ли почти метровая ширина.",
+        "question": "Готов ли ты пожертвовать компактностью ради привычных полноразмерных клавиш?"
+      }
     },
     {
       "id": "nektar-se61",
@@ -525,7 +577,13 @@
       "line_out": null,
       "power_modes": [],
       "notes_on_uncertainty": [],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если хочется недорогую точку входа в MIDI и ты согласен играть через программу.",
+        "not_for": "Если обязательно нужен собственный звук или подтверждённые габариты для очень узкого стола.",
+        "try_in_store": "Проверь не только ощущение клавиш, но и возможность комфортно играть очень тихо.",
+        "question": "Не окажется ли экономия меньше ценности возможности включить инструмент без компьютера?"
+      }
     },
     {
       "id": "roland-gokeys3",
@@ -605,7 +663,13 @@
         "aa_battery"
       ],
       "notes_on_uncertainty": [],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если хочется одновременно играть без компьютера, пробовать звуки, стили и подключаться к музыкальному софту.",
+        "not_for": "Если нужен просто дешёвый и максимально лаконичный инструмент без обилия функций.",
+        "try_in_store": "Выбери один любимый звук, сыграй без автоаккомпанемента и сравни ощущения с более простой моделью.",
+        "question": "Будешь ли действительно использовать сопровождения и дополнительные звуки, за которые доплачиваешь?"
+      }
     },
     {
       "id": "yamaha-psre383",
@@ -685,10 +749,16 @@
         "aa_battery"
       ],
       "notes_on_uncertainty": [],
-      "data_quality": "research_seed"
+      "data_quality": "research_seed",
+      "editorial": {
+        "best_for": "Если хочется автономной игры с учебными функциями, аккомпанементом и подключением USB audio/MIDI.",
+        "not_for": "Если критична малая глубина корпуса или минимальное число кнопок.",
+        "try_in_store": "Проверь, удобна ли глубина 31,7 см на столе, и попробуй играть без автоаккомпанемента.",
+        "question": "Нужны ли тебе учебные и аккомпанирующие функции, или ты ими почти не воспользуешься?"
+      }
     }
   ],
-  "description": "V2 audited research seed. No live stock guarantees. Only exact-variant prices qualify for price comparisons.",
+  "description": "Editorial guidance with 11 per-model fit/avoid/try/decision questions. Spec and offer claims remain source referenced; editorial is interpretation not product review.",
   "data_policy": {
     "hard_constraints_unknown": "review_needed_not_false",
     "price_snapshots_are_not_inventory": true,
